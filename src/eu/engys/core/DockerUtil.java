@@ -51,7 +51,7 @@ public class DockerUtil {
     private static final String ENGYS_22_BETA_ENV_LOADER = "/opt/OpenFOAM-2.2_engysEdition-beta/etc/bashrc";
 
     private static final String OF_PLUS_VENDOR_HOME = "/opt/OpenFOAM";
-    private static final String OF_PLUS_ENV_LOADER = "/opt/OpenFOAM/OpenFOAM-v1606+/etc/bashrc";
+    private static final String OF_PLUS_ENV_LOADER = "/opt/OpenFOAM/setImage_v1812.sh";
 
     private static final String PV_VERSION = "4.1.0";
     private static final String MACHINEFILE = "";
@@ -131,6 +131,7 @@ public class DockerUtil {
 
         CommandLine commandLine = new CommandLine("docker");
         commandLine.addArguments(arguments.toArray(new String[0]), false);
+        // System.out.printf("paraview CMD: %s \n", commandLine.toString());
         return Util.isWindows() ? windowsWrapper(baseDir.getAbsolutePath(), commandLine).toString() : commandLine.toString();
     }
 
@@ -191,6 +192,8 @@ public class DockerUtil {
         arguments.add("QT_X11_NO_MITSHM=1");
         arguments.add("-e");
         arguments.add("DISPLAY=" + DISPLAY);
+        arguments.add("-e");
+        arguments.add("QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb");
     }
 
     private static void addUserVariables(List<String> arguments) {
@@ -208,6 +211,8 @@ public class DockerUtil {
         arguments.add("/etc/sudoers.d:/etc");
         arguments.add("-v");
         arguments.add("/tmp:/tmp");
+        arguments.add("-v");
+        arguments.add("/etc/machine-id:/etc/machine-id");
     }
 
     private static void addRunCommand(List<String> arguments, boolean interactive, boolean tty) {
