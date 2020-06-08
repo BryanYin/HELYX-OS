@@ -92,7 +92,7 @@ public class StatusBar extends JPanel {
         setOpaque(false);
 
         terminalButton = createTerminalButton();
-        nameLabel = createLabel(ApplicationInfo.getName());
+        nameLabel = createLabel("DO-CFD");
         versionLabel = createLabel(ApplicationInfo.getVersion() + " " + "[" + ApplicationInfo.getBuildDate() + "]");
         caseLabel = createLabel(DEFAULT_TEXT);
         typeLabel = createLabel(DEFAULT_TEXT);

@@ -65,8 +65,8 @@ import eu.engys.gui.casesetup.boundaryconditions.parameterspanel.MomentumParamet
 
 public class StandardMomentumWall extends MomentumParametersPanel {
 
-	private static final String MOVING_WALL = "Moving Wall";
-	private static final String FIXED_WALL = "Fixed Wall";
+	private static final String MOVING_WALL = "移动墙";
+	private static final String FIXED_WALL = "固定墙";
 	public static final String[] TYPE_KEYS = { "noslip", "slip" };
 	public static final String[] TYPE_LABELS = { "No-slip", "Slip" };
 

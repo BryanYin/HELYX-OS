@@ -30,7 +30,7 @@ import eu.engys.util.ui.ChooserPanel;
 
 public class TimePanel extends ChooserPanel {
 
-    public static final String TIME = "Time";
+    public static final String TIME = "时间";
 
     public TimePanel() {
         super(TimePanel.TIME);

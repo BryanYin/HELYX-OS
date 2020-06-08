@@ -52,7 +52,7 @@ public class MaterialParametersPanel extends JPanel {
 
     public MaterialParametersPanel(CompressibleMaterialsPanel compressiblePanel, IncompressibleMaterialsPanel incompressiblePanel) {
         super(new CardLayout());
-        setName("Material Parameters");
+        setName("材料参数");
 
         this.compressiblePanel = compressiblePanel;
         this.incompressiblePanel = incompressiblePanel;
@@ -62,7 +62,7 @@ public class MaterialParametersPanel extends JPanel {
 
         compPanel.setName("Compressible Panel");
         incompPanel.setName("Incompressible Panel");
-        incompPanel.setBorder(BorderFactory.createTitledBorder("Material Parameters"));
+        incompPanel.setBorder(BorderFactory.createTitledBorder("材料参数"));
 
         add(compPanel, COMPRESSIBLE);
         add(incompPanel, INCOMPRESSIBLE);

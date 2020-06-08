@@ -67,40 +67,40 @@ import eu.engys.util.ui.textfields.IntegerField;
 
 public abstract class AbstractGeometryPanel extends AbstractGUIPanel implements GeometryPanel, ActionContainer {
 
-    public static final String ZONES_LABEL = "Zones";
-    public static final String LAYERS_LABEL = "Layers";
-    public static final String REFINEMENT_LABEL = "Refinement";
-    public static final String GEOMETRY = "Geometry";
+    public static final String ZONES_LABEL = "区域";
+    public static final String LAYERS_LABEL = "层";
+    public static final String REFINEMENT_LABEL = "微调";
+    public static final String GEOMETRY = "几何体";
 
-    public static final String DISTANCE_M_LABEL = "Distance [m]";
+    public static final String DISTANCE_M_LABEL = "距离 [m]";
 
-    public static final String SURFACE_LABEL = "Surface";
-    public static final String BAFFLE_LABEL = "Baffle";
-    public static final String BOUNDARY_LABEL = "Boundary";
-    public static final String INTERNAL_LABEL = "Internal";
-    public static final String TYPE_LABEL = "Type";
-    public static final String NAME_LABEL = "Name";
-    public static final String CELL_ZONE_LABEL = "Cell Zone";
-    public static final String LEVEL_LABEL = "Level";
-    public static final String PROXIMITY_REFINEMENT_LABEL = "Proximity Refinement";
-    public static final String FINAL_LAYER_THICKNESS_LABEL = "Final Layer Thickness";
-    public static final String LAYER_STRETCHING_LABEL = "Layer Stretching";
-    public static final String NUMBER_OF_LAYERS_LABEL = "Number of Layers";
-    public static final String CELL_SIZE_LABEL = "Cell Size [m]";
+    public static final String SURFACE_LABEL = "表面";
+    public static final String BAFFLE_LABEL = "阻隔";
+    public static final String BOUNDARY_LABEL = "边界";
+    public static final String INTERNAL_LABEL = "内部";
+    public static final String TYPE_LABEL = "类型";
+    public static final String NAME_LABEL = "名称";
+    public static final String CELL_ZONE_LABEL = "网格区域";
+    public static final String LEVEL_LABEL = "级别";
+    public static final String PROXIMITY_REFINEMENT_LABEL = "贴体微调";
+    public static final String FINAL_LAYER_THICKNESS_LABEL = "最终层厚度";
+    public static final String LAYER_STRETCHING_LABEL = "层拉伸";
+    public static final String NUMBER_OF_LAYERS_LABEL = "层数";
+    public static final String CELL_SIZE_LABEL = "网格大小 [m]";
 
-    public static final String INSIDE_LEVEL_LABEL = "Inside Level";
-    public static final String OUTSIDE_LEVEL_LABEL = "Outside Level";
-    public static final String DISTANCE_LEVEL_LABEL = "Distance Level";
+    public static final String INSIDE_LEVEL_LABEL = "内部级别";
+    public static final String OUTSIDE_LEVEL_LABEL = "外部级别";
+    public static final String DISTANCE_LEVEL_LABEL = "距离级别";
 
-    public static final String MODE_LABEL = "Mode";
-    public static final String NONE = "none";
-    public static final String INSIDE = "inside";
-    public static final String OUTSIDE = "outside";
-    public static final String DISTANCE = "distance";
-    public static final String NONE_LABEL = "None";
-    public static final String INSIDE_LABEL = "Inside";
-    public static final String OUTSIDE_LABEL = "Outside";
-    public static final String DISTANCE_LABEL = "Distance";
+    public static final String MODE_LABEL = "模式";
+    public static final String NONE = "无";
+    public static final String INSIDE = "内部";
+    public static final String OUTSIDE = "外部";
+    public static final String DISTANCE = "距离";
+    public static final String NONE_LABEL = "无";
+    public static final String INSIDE_LABEL = "内部";
+    public static final String OUTSIDE_LABEL = "外部";
+    public static final String DISTANCE_LABEL = "距离";
 
     protected DictionaryModel surfaceModel;
     protected DictionaryModel volumeModel;
@@ -225,7 +225,7 @@ public abstract class AbstractGeometryPanel extends AbstractGUIPanel implements 
                 layersBuilder.setEnabled(distanceRefinementOrNone || isCellZone());
             }
         });
-        volumesBuilder.getPanel().setBorder(BorderFactory.createTitledBorder("Volumetric"));
+        volumesBuilder.getPanel().setBorder(BorderFactory.createTitledBorder("容量"));
         return volumesBuilder.getPanel();
     }
 

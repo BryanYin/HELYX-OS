@@ -52,7 +52,7 @@ public final class ResourcesUtil {
 
 	public static String getString(String key) {
 		try {
-			return bundle.getString(key);
+			return new String(bundle.getString(key).getBytes("ISO-8859-1"),"UTF-8");
 		} catch (Exception e) {
 			LoggerFactory.getLogger(ResourcesUtil.class).warn(e.getMessage());
 			return "MISSING";

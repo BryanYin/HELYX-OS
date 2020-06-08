@@ -330,7 +330,7 @@ public class View extends JPanel implements Observer, ActionContainer, GenericEv
                 });
             }
             popup.addSeparator();
-            popup.add(new AbstractAction("Clear") {
+            popup.add(new AbstractAction("清除") {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     RecentItems.getInstance().clear();
@@ -344,7 +344,7 @@ public class View extends JPanel implements Observer, ActionContainer, GenericEv
     public void save() {
         File baseDir = model.getProject().getBaseDir();
         if (baseDir.exists()) {
-            int retVal = JOptionPane.showConfirmDialog(UiUtil.getActiveWindow(), "Overwrite existing case?", "Warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            int retVal = JOptionPane.showConfirmDialog(UiUtil.getActiveWindow(), "覆盖已存在的用例？", "警告", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
             if (retVal == JOptionPane.YES_OPTION) {
                 controller.saveCase(baseDir);
             }

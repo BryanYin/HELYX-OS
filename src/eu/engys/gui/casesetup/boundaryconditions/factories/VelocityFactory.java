@@ -67,6 +67,7 @@ import static eu.engys.gui.casesetup.boundaryconditions.utils.BoundaryConditions
 import static eu.engys.gui.casesetup.boundaryconditions.utils.BoundaryConditionsUtils.VARIABLE_HEIGHT_FLOW_RATE_INLET_VELOCITY_KEY;
 import static eu.engys.gui.casesetup.boundaryconditions.utils.BoundaryConditionsUtils.VOLUMETRIC_FLOW_RATE_KEY;
 import static eu.engys.gui.casesetup.boundaryconditions.utils.BoundaryConditionsUtils.ZERO_GRADIENT_KEY;
+import static eu.engys.gui.casesetup.boundaryconditions.utils.BoundaryConditionsUtils.FIXED_WALL_NO_SLIP_U_KEY;
 
 import eu.engys.core.dictionary.Dictionary;
 
@@ -227,8 +228,7 @@ public class VelocityFactory {
 
     public static final Dictionary noSlipWall = new Dictionary(U) {
         {
-            add(TYPE, FIXED_VALUE_KEY);
-            addUniform(VALUE, new double[] { 0, 0, 0 });
+            add(TYPE, FIXED_WALL_NO_SLIP_U_KEY);
         }
     };
 

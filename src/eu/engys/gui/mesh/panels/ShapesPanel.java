@@ -75,12 +75,12 @@ public class ShapesPanel extends JPanel {
         }
     }
 
-    public static final String BOX_NAME_LABEL = "Box Name";
-    public static final String SPHERE_NAME_LABEL = "Sphere Name";
-    public static final String CYLINDER_NAME_LABEL = "Cylinder Name";
-    public static final String PLANE_NAME_LABEL = "Plane Name";
-    public static final String RING_NAME_LABEL = "Ring Name";
-    public static final String SURFACE_NAME_LABEL = "Surface Name";
+    public static final String BOX_NAME_LABEL = "盒子名称";
+    public static final String SPHERE_NAME_LABEL = "球体名称";
+    public static final String CYLINDER_NAME_LABEL = "圆柱体名称";
+    public static final String PLANE_NAME_LABEL = "平面名称";
+    public static final String RING_NAME_LABEL = "环名称";
+    public static final String SURFACE_NAME_LABEL = "表面名称";
 
     public static final String OUTER_RADIUS_LABEL = "Outer Radius " + Symbols.M;
     public static final String INNER_RADIUS_LABEL = "Inner Radius " + Symbols.M;
@@ -317,7 +317,7 @@ public class ShapesPanel extends JPanel {
 
     private void addNoneComponent(PanelBuilder builder) {
         noneGroup = new RowGroup();
-        builder.addComponentToGroup(noneGroup, new JLabel("Select or Add a geometry"));
+        builder.addComponentToGroup(noneGroup, new JLabel("选择或添加几何体"));
         noneGroup.show();
     }
 

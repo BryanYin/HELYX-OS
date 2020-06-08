@@ -33,7 +33,7 @@ import eu.engys.util.ui.builder.PanelBuilder;
 
 public class View3DOptions implements Options {
 
-    private JCheckBox loadMesh = new JCheckBox("Display Mesh After Reading", true);
+    private JCheckBox loadMesh = new JCheckBox("加载之后展示网格", true);
 
     @Override
     public void onSelectionChanged() {
@@ -43,7 +43,7 @@ public class View3DOptions implements Options {
     public JPanel getPanel() {
         PanelBuilder builder = new PanelBuilder();
         builder.addLeft(loadMesh);
-        builder.getPanel().setBorder(BorderFactory.createTitledBorder("Display Options"));
+        builder.getPanel().setBorder(BorderFactory.createTitledBorder("显示设置"));
         return builder.getPanel();
     }
 

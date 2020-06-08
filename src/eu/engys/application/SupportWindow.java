@@ -55,7 +55,8 @@ import eu.engys.util.ui.UiUtil;
 
 public class SupportWindow {
 
-    private static final String MESSAGE = "If you require technical assistance with HELYX-OS and OPENFOAM" + Symbols.COPYRIGHT + ", ENGYS offers a dedicated user support package. For more information please contact ";
+    // private static final String MESSAGE = "If you require technical assistance with HELYX-OS and OPENFOAM" + Symbols.COPYRIGHT + ", DataOcean offers a dedicated user support package. For more information please contact ";
+    private static final String MESSAGE = "如果需要 DO-CFD 和 OPENFOAM" + Symbols.COPYRIGHT + " 的支持，数洋智慧提供专业用户支持计划。了解详情，请联系 ";
     private static final String SUBJECT = "HELYX-OS%20Info%20Request";
     private final String disclaimer;
 
@@ -108,7 +109,7 @@ public class SupportWindow {
     private JPanel createCloseButtonPanel() {
         JPanel panel = new JPanel(new FlowLayout());
         panel.setBackground(Color.WHITE);
-        panel.add(new JButton(new AbstractAction("Close") {
+        panel.add(new JButton(new AbstractAction("关闭") {
             @Override
             public void actionPerformed(ActionEvent e) {
                 window.dispose();

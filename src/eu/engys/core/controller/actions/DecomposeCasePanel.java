@@ -75,17 +75,17 @@ import eu.engys.util.ui.textfields.IntegerField;
 
 public class DecomposeCasePanel extends JPanel {
 
-    public static final String DECOMPOSE_CASE_LABEL = "Decompose Case";
-    public static final String HIERARCHY_LABEL = "Hierarchy";
-    public static final String PROCESSORS_LABEL = "Processors";
-    public static final String DECOMPOSITION_TYPE_LABEL = "Decomposition Type";
-    public static final String TIME_STEP = "Time Steps";
+    public static final String DECOMPOSE_CASE_LABEL = "解耦用例";
+    public static final String HIERARCHY_LABEL = "结构";
+    public static final String PROCESSORS_LABEL = "处理器";
+    public static final String DECOMPOSITION_TYPE_LABEL = "解耦类型";
+    public static final String TIME_STEP = "时间步骤";
 
     public static final String HIERARCHICAL_LABEL = "Hierarchical";
     public static final String SCOTCH_LABEL = "Scotch";
     private static final String[] TYPE_LABELS = { HIERARCHICAL_LABEL, SCOTCH_LABEL };
-    private static final String SELECT_ALL = "Select All";
-    private static final String DESELECT_ALL = "Deselect All";
+    private static final String SELECT_ALL = "全选";
+    private static final String DESELECT_ALL = "取消全选";
     public static final String DECOMPOSE_PANEL = "decompose.panel";
 
     private Map<JCheckBox, String> timeStepMap;

@@ -40,7 +40,7 @@ public class StandardBoundaryMeshPanel extends AbstractBoundaryMeshPanel {
     
     @Override
     protected void addExtraComponents(PanelBuilder builder) {
-        builder.addComponent(new JLabel("Press Check button to update statistics"));
+        builder.addComponent(new JLabel("点击 检查 按钮更新统计信息"));
     }
 
 }

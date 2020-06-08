@@ -45,6 +45,7 @@ import org.apache.commons.vfs2.FileType;
 import eu.engys.util.filechooser.AbstractFileChooser.ReturnValue;
 import eu.engys.util.filechooser.util.HelyxFileFilter;
 import eu.engys.util.ui.ExecUtil;
+import eu.engys.util.ui.UiUtil;
 import eu.engys.util.ui.builder.PanelBuilder;
 import net.java.dev.designgridlayout.Componentizer;
 
@@ -69,10 +70,10 @@ public class ButtonsPanel extends JPanel {
 	private void layoutComponents() {
 		PanelBuilder pb = new PanelBuilder();
 		okButton = new JButton(new OkAction());
-		okButton.setName("OK");
+		okButton.setName(UiUtil.DIALOG_OK_LABEL);
 		okButton.setEnabled(false);
 		JButton cancelButton = new JButton(new CancelAction());
-		cancelButton.setName("Cancel");
+		cancelButton.setName(UiUtil.DIALOG_CANCEL_LABEL);
 		if (filters != null) {
 			filterCombo = createFilterCombo();
 			pb.addComponent("Type", Componentizer.create().prefAndMore(filterCombo).minToPref(okButton, cancelButton).component());
@@ -182,7 +183,7 @@ public class ButtonsPanel extends JPanel {
 
 	private class OkAction extends AbstractAction {
 		public OkAction() {
-			super(controller.isSaveAs() ? "Save" : filters != null ? "Open" : "Select");
+			super(controller.isSaveAs() ? "保存" : filters != null ? "保存" : "选择");
 		}
 
 		@Override
@@ -193,7 +194,7 @@ public class ButtonsPanel extends JPanel {
 
 	private class CancelAction extends AbstractAction {
 		public CancelAction() {
-			super("Cancel");
+			super(UiUtil.DIALOG_CANCEL_LABEL);
 		}
 
 		@Override

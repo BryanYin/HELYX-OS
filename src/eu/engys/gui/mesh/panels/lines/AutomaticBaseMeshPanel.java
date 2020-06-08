@@ -36,8 +36,8 @@ import eu.engys.util.ui.textfields.DoubleField;
 
 public class AutomaticBaseMeshPanel {
 
-    public static final String AUTOMATIC_LABEL = "Automatic";
-    public static final String BASE_MESHSPACING_LABEL = "Base Mesh Spacing " + Symbols.M;
+    public static final String AUTOMATIC_LABEL = "自动计算";
+    public static final String BASE_MESHSPACING_LABEL = "基础网格空隙 " + Symbols.M;
 
     private BeanPanelBuilder builder;
 

@@ -49,13 +49,13 @@ public class DynamicSolutionView extends AbstractSolutionView {
 
     private static final Logger logger = LoggerFactory.getLogger(DynamicSolutionView.class);
 
-    public static final String OFF_LABEL = "Off";
-    public static final String SIX_DOF_LABEL = "6 DOF Domain Motion";
-    public static final String SOLID_RIGID_BODY_LABEL = "Rigid Body Domain Motion";
-    public static final String MULTI_RIGID_BODY_LABEL = "Rigid Body Cell Zone Motion";
-    public static final String DYNAMIC_REFINE_FV_MESH_LABEL = "Dynamic Mesh Refinement";
+    public static final String OFF_LABEL = "关";
+    public static final String SIX_DOF_LABEL = "6自由度域移动";
+    public static final String SOLID_RIGID_BODY_LABEL = "刚体域移动";
+    public static final String MULTI_RIGID_BODY_LABEL = "刚体网格单元域移动";
+    public static final String DYNAMIC_REFINE_FV_MESH_LABEL = "动态网格微调";
     
-    public static final String DYNAMIC_OFF_NAME = "Dynamic" + OFF_LABEL;
+    public static final String DYNAMIC_OFF_NAME = "动态" + OFF_LABEL;
 
     private Model model;
     private DynamicModule module;

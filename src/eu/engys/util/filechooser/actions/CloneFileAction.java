@@ -55,13 +55,13 @@ public class CloneFileAction extends AbstractAction {
 
 	private static final Logger logger = LoggerFactory.getLogger(CloneFileAction.class);
 
-	private static final String TITLE = "Clone file";
-	private static final String PROMPT = "File name";
+	private static final String TITLE = "复制文件";
+	private static final String PROMPT = "文件名";
 	public static final String TEXTFIELD_NAME = "fileobject.name";
-	public static final String CANCEL_LABEL = "Cancel";
-	public static final String CREATE_LABEL = "Create";
-	private static final String FILE_ALREADY_EXISTS = "File already exist";
-	private static final String EMPTY_NAME_MESSAGE = "Cannot create file or folder with empty name!";
+	public static final String CANCEL_LABEL = "取消";
+	public static final String CREATE_LABEL = "创建";
+	private static final String FILE_ALREADY_EXISTS = "文件已经存在";
+	private static final String EMPTY_NAME_MESSAGE = "不能用空名称创建文件或者目录";
 
 	private FileChooserController controller;
 	private JTable table;

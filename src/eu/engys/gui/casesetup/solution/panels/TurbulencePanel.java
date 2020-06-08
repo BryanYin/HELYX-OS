@@ -46,7 +46,7 @@ import eu.engys.util.ui.builder.PanelBuilder;
 
 public class TurbulencePanel extends JPanel {
 
-    public static final String TURBULENCE_MODEL = "Turbulence Model";
+    public static final String TURBULENCE_MODEL = "湍流模型";
     private JComboBox<TurbulenceModel> modelsCombo;
 
     public TurbulencePanel() {

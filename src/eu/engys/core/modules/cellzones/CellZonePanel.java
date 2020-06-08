@@ -39,9 +39,9 @@ public interface CellZonePanel {
     /*
      * MRF
      */
-    public static final String ORIGIN_LABEL = "Origin";
-    public static final String AXIS_LABEL = "Axis";
-    public static final String OMEGA_RAD_S_LABEL = "Omega [rad/s]";
+    public static final String ORIGIN_LABEL = "原点";
+    public static final String AXIS_LABEL = "轴";
+    public static final String OMEGA_RAD_S_LABEL = "角速度 [rad/s]";
     public static final String NON_ROTATING_PATCHES_INSIDE_MRF_ZONE_LABEL = "Non-rotating patches inside MRF zone";
     
     /*

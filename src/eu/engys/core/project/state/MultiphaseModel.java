@@ -29,7 +29,7 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
 
 public class MultiphaseModel {
 
-    public static final String OFF_LABEL = "Off";
+    public static final String OFF_LABEL = "关";
     public static final MultiphaseModel OFF = new MultiphaseModel(OFF_LABEL, "", false, false);
 
     private String label;

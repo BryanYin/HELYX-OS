@@ -44,15 +44,16 @@ import org.apache.commons.vfs2.FileObject;
 import eu.engys.util.filechooser.gui.FileChooserController;
 import eu.engys.util.filechooser.util.VFSUtils;
 import eu.engys.util.ui.ResourcesUtil;
+import eu.engys.util.ui.UiUtil;
 import eu.engys.util.ui.textfields.StringField;
 
 public final class NewFolderAction extends AbstractAction {
 
-    private static final String TITLE = "New Folder";
-    private static final String PROMPT = "Folder name";
+    private static final String TITLE = "新建文件夹";
+    private static final String PROMPT = "文件夹名称";
     public static final String TEXTFIELD_NAME = "newFolder.name";
-    public static final String CANCEL_LABEL = "Cancel";
-    public static final String CREATE_LABEL = "Create";
+    public static final String CANCEL_LABEL = UiUtil.DIALOG_CANCEL_LABEL;
+    public static final String CREATE_LABEL = UiUtil.CREATE_BUTTON_LABEL;
     private static final String FOLDER_ALREADY_EXISTS = "Folder already exists";
     private static final String EMPTY_NAME_MESSAGE = "Cannot create folder with empty name";
 

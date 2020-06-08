@@ -64,12 +64,12 @@ import eu.engys.util.ui.textfields.verifiers.AbstractVerifier.ValidationStatusLi
 
 public class CreateCaseDialog extends JPanel {
 
-    public static final String CREATE_CASE_LABEL = "Create Case";
-    public static final String HIERARCHY_LABEL = "Hierarchy";
-    public static final String PROCESSORS_LABEL = "Processors";
-    public static final String PARALLEL_LABEL = "Parallel";
-    public static final String PARENT_FOLDER_LABEL = "Parent Folder";
-    public static final String CASE_NAME_LABEL = "Case Name";
+    public static final String CREATE_CASE_LABEL = "创建用例";
+    public static final String HIERARCHY_LABEL = "层级";
+    public static final String PROCESSORS_LABEL = "处理器";
+    public static final String PARALLEL_LABEL = "并行处理";
+    public static final String PARENT_FOLDER_LABEL = "文件夹";
+    public static final String CASE_NAME_LABEL = "用例名称";
 
     private static final int X = 0;
     private static final int Y = 1;
@@ -143,10 +143,10 @@ public class CreateCaseDialog extends JPanel {
 
     private void createDialog() {
         JButton okButton = new JButton(okAction);
-        okButton.setName("button.ok");
+        okButton.setName(UiUtil.DIALOG_OK_LABEL);
 
         JButton cancelButton = new JButton(cancelAction);
-        cancelButton.setName("button.cancel");
+        cancelButton.setName(UiUtil.DIALOG_CANCEL_LABEL);
 
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         buttonsPanel.add(okButton);
@@ -290,7 +290,7 @@ public class CreateCaseDialog extends JPanel {
     private final class OkDialogAction extends AbstractAction implements Runnable {
 
         public OkDialogAction() {
-            super("OK");
+            super(UiUtil.DIALOG_OK_LABEL);
         }
 
         @Override
@@ -307,7 +307,7 @@ public class CreateCaseDialog extends JPanel {
     private final class CancelDialogAction extends AbstractAction implements Runnable {
 
         public CancelDialogAction() {
-            super("Cancel");
+            super(UiUtil.DIALOG_CANCEL_LABEL);
         }
 
         @Override

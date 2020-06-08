@@ -79,14 +79,14 @@ public abstract class TableAndChartPanel extends JPanel {
 
     private static final int SIZE = 600;
     
-    private static final String ADD_TOOLTIP = "Add a row to the table";
-    private static final String REM_TOOLTIP = "Remove selected rows";
+    private static final String ADD_TOOLTIP = "为表格添加一行";
+    private static final String REM_TOOLTIP = "移除选中的行";
     private static final Icon ADD_ICON = ResourcesUtil.getResourceIcon("eu/engys/resources/images/table_add16.png");
     private static final Icon REM_ICON = ResourcesUtil.getResourceIcon("eu/engys/resources/images/table_delete16.png");
     public static final String ADD_ROW_BUTTON = "add.row.button";
     public static final String REM_ROW_BUTTON = "rem.row.button";
-    public static final String OK_BUTTON_LABEL = "OK";
-    public static final String CANCEL_BUTTON_LABEL = "Cancel";
+    public static final String OK_BUTTON_LABEL = UiUtil.DIALOG_OK_LABEL;
+    public static final String CANCEL_BUTTON_LABEL = UiUtil.DIALOG_CANCEL_LABEL;
 
     private JButton okButton;
 
@@ -170,7 +170,7 @@ public abstract class TableAndChartPanel extends JPanel {
 
     private JPanel createDialogButtons() {
         JPanel rightButtonsPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        okButton = new JButton(new AbstractAction("OK") {
+        okButton = new JButton(new AbstractAction(UiUtil.DIALOG_OK_LABEL) {
 
             @Override
             public void actionPerformed(ActionEvent e) {

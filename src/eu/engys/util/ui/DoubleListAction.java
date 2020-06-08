@@ -68,23 +68,23 @@ public class DoubleListAction extends AbstractAction {
             dual = new DualList();
 
             ArrayList<JComponent> buttons = new ArrayList<JComponent>();
-            JButton okButton = new JButton(new AbstractAction("OK") {
+            JButton okButton = new JButton(new AbstractAction(UiUtil.DIALOG_OK_LABEL) {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     listField.setValues(dual.getDestinationElements());
                     dialog.setVisible(false);
                 }
             });
-            okButton.setName("OK");
+            okButton.setName(UiUtil.DIALOG_OK_LABEL);
             buttons.add(okButton);
 
-            JButton cancelButton = new JButton(new AbstractAction("Cancel") {
+            JButton cancelButton = new JButton(new AbstractAction(UiUtil.DIALOG_CANCEL_LABEL) {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     dialog.setVisible(false);
                 }
             });
-            cancelButton.setName("Cancel");
+            cancelButton.setName(UiUtil.DIALOG_CANCEL_LABEL);
             buttons.add(cancelButton);
 
             JComponent buttonsPanel = UiUtil.getCommandRow(buttons);

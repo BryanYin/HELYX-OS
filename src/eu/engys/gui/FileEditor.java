@@ -176,10 +176,10 @@ public class FileEditor {
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 
         okButton = new JButton(new OKAction());
-        okButton.setName("OK");
+        okButton.setName(UiUtil.DIALOG_OK_LABEL);
 
         JButton cancelButton = new JButton(new CancelAction());
-        cancelButton.setName("Cancel");
+        cancelButton.setName(UiUtil.DIALOG_CANCEL_LABEL);
 
         panel.add(okButton);
         panel.add(cancelButton);
@@ -226,7 +226,7 @@ public class FileEditor {
 
     private class OKAction extends AbstractAction {
         public OKAction() {
-            super("OK");
+            super(UiUtil.DIALOG_OK_LABEL);
         }
 
         @Override
@@ -241,7 +241,7 @@ public class FileEditor {
 
     private class CancelAction extends AbstractAction {
         public CancelAction() {
-            super("Cancel");
+            super(UiUtil.DIALOG_CANCEL_LABEL);
         }
 
         @Override

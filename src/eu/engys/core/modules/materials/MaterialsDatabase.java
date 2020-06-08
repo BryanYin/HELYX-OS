@@ -41,10 +41,10 @@ public class MaterialsDatabase {
 
     private Map<String, CompressibleMaterial > compressibleMaterialsMap = new HashMap<>();
     private Map<String, IncompressibleMaterial > incompressibleMaterialsMap = new HashMap<>();
-	public static final String AIR = "air";
-	public static final String MERCURY = "mercury";
-	public static final String WATER = "water";
-	public static final String OIL = "oil";
+	public static final String AIR = "空气";
+	public static final String MERCURY = "水银";
+	public static final String WATER = "水";
+	public static final String OIL = "油";
 
     @Inject
     public MaterialsDatabase(Defaults defaults, MaterialsReader reader) {

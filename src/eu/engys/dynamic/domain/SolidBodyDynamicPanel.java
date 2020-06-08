@@ -46,7 +46,7 @@ import eu.engys.util.ui.JComboBoxWithItemsSupport;
 
 public class SolidBodyDynamicPanel extends AbstractDynamicPanel {
 
-    public static final String TYPE_LABEL = "Type";
+    public static final String TYPE_LABEL = "类型";
     public static final String TYPE_TOOLTIP = "Rigid Body Motion Type";
 
     public static final String LINEAR_MOTION_LABEL = "Linear Motion";
@@ -57,7 +57,7 @@ public class SolidBodyDynamicPanel extends AbstractDynamicPanel {
     public static final String OSCILLATING_ROTATING_MOTION_LABEL = "Oscillating Rotating Motion";
     public static final String SDA_LABEL = "Ship Tank Sloshing";
 
-    public static final String VELOCITY_LABEL = "Velocity " + Symbols.M_S;
+    public static final String VELOCITY_LABEL = "速度 " + Symbols.M_S;
     public static final String AMPLITUDE_LABEL = "Amplitude " + Symbols.M;
     public static final String CENTRE_OF_ROTATION_LABEL = "Centre of Rotation " + Symbols.M;
     public static final String AXIS_OF_ROTATION_LABEL = "Axis of Rotation " + Symbols.M;

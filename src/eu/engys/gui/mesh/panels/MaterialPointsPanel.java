@@ -60,7 +60,7 @@ import net.java.dev.designgridlayout.Componentizer;
 
 public class MaterialPointsPanel extends DefaultGUIPanel {
 
-    public static final String MATERIAL_POINT = "Material Point";
+    public static final String MATERIAL_POINT = "材料点";
     
     private final static Icon CENTRE_ICON = ResourcesUtil.getIcon("centre.materialpoint.icon");
 

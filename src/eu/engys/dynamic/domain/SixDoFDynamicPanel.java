@@ -79,7 +79,7 @@ public class SixDoFDynamicPanel extends AbstractDynamicPanel {
     public static final String MASS_LABEL = "Mass " + Symbols.KG;
     public static final String CENTRE_OF_MASS_LABEL = "Centre of Mass " + Symbols.M;
     public static final String MOMENT_OF_INERTIA_LABEL = "Moment of Inertia " + Symbols.KGM2;
-    public static final String VELOCITY_LABEL = "Velocity " + Symbols.M_S;
+    public static final String VELOCITY_LABEL = "速度 " + Symbols.M_S;
     public static final String ACCELERATION_RELAXATION_LABEL = "Acceleration Relaxation";
 
     public static final String TRANSLATION_CONSTRAINT_LABEL = "Translation Constraint";

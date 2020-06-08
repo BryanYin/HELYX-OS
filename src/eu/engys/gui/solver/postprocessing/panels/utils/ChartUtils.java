@@ -47,8 +47,8 @@ public class ChartUtils {
     public static final Color SERIES_BLUE = new Color(85, 85, 255);
     public static final Color SERIES_GREEN = new Color(85, 255, 85);
 
-    private static final String STEADY_DOMAIN_AXIS_LABEL = "Iteration [-]";
-    private static final String TRANSIENT_DOMAIN_AXIS_LABEL = "Time [s]";
+    private static final String STEADY_DOMAIN_AXIS_LABEL = "迭代步数 [-]";
+    private static final String TRANSIENT_DOMAIN_AXIS_LABEL = "时间 [s]";
 
     private static final Color CROSSHAIR_COLOR = Color.BLACK;
     private static final BasicStroke CROSSHAIR_STROKE = new BasicStroke(1f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1.0f, new float[] { 1.0f }, 0.0f);

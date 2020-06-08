@@ -154,7 +154,7 @@ public class TextCellEditor extends AbstractCellEditor implements ActionListener
         
         class OkAction extends AbstractAction {
             public OkAction() {
-                super("OK");
+                super(UiUtil.DIALOG_OK_LABEL);
             }
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -167,7 +167,7 @@ public class TextCellEditor extends AbstractCellEditor implements ActionListener
         }
         class CancelAction extends AbstractAction {
             public CancelAction() {
-                super("Cancel");
+                super(UiUtil.DIALOG_CANCEL_LABEL);
             }
             @Override
             public void actionPerformed(ActionEvent e) {

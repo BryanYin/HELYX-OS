@@ -2,12 +2,12 @@
 <project default="dist" name="Create Jar for HELYX-OS">
 
 	<property name="component.name" value="HELYX-OS" />
-	<property name="component.vendor" value="Engys" />
-	<property name="component.mail" value="info@engys.com" />
-	<property name="component.site" value="http://engys.github.io/HELYX-OS/" />
-	<property name="component.copyright" value="Copyright © ENGYS Ltd 2016. All rights reserved." />
+	<property name="component.vendor" value="DataOcean" />
+	<property name="component.mail" value="contact@dataocean.com.cn" />
+	<property name="component.site" value="http://www.dataocean.com.cn" />
+	<property name="component.copyright" value="Copyright © DataOcean Ltd 2015. All rights reserved." />
 	<property name="component.launcher" value="eu.engys.launcher.Launcher" />
-	<property name="component.version" value="2.4.0" />
+	<property name="component.version" value="2.5.0" />
 
 	<property name="jar.name" value="${component.name}.jar" />
 	<property name="src.dir" value="src" />
@@ -25,7 +25,7 @@
 	</target>
 
 	<target name="compile" depends="init">
-		<javac debug="true" destdir="${build.dir}" target="1.7" source="1.7" verbose="false" srcdir="${src.dir}" includeantruntime="false" includejavaruntime="yes">
+		<javac debug="true" destdir="${build.dir}" target="1.7" encoding="UTF8" source="1.7" verbose="false" srcdir="${src.dir}" includeantruntime="false" includejavaruntime="yes">
 			<include name="eu/engys/**/*.java" />
 			<classpath refid="build.path" />
 		</javac>
@@ -68,7 +68,7 @@
 				<attribute name="Specification-Title" value="${component.name}" />
 				<attribute name="Specification-Version" value="${component.version}" />
 				<attribute name="Specification-Vendor" value="${component.vendor}" />
-				<attribute name="Implementation-Title" value="${component.name}" />
+				<!-- <attribute name="Implementation-Title" value="${component.name}" /> -->
 				<attribute name="Implementation-Version" value="${component.version} ${TODAY}" />
 				<attribute name="Implementation-Vendor" value="${component.vendor}" />
 

@@ -108,13 +108,15 @@ import eu.engys.util.progress.ProgressMonitor;
 
 public final class UiUtil {
 
-    public static String DIALOG_OK_LABEL = "OK";
-    public static String DIALOG_CANCEL_LABEL = "Cancel";
-    public static String RESET_BUTTON_LABEL = "Reset";
-    public static String ADD_BUTTON_LABEL = "Add";
-    public static String REMOVE_BUTTON_LABEL = "Remove";
-    public static String EDIT_BUTTON_LABEL = "Edit";
-    public static final String NONE_LABEL = "None";
+    public static String DIALOG_OK_LABEL = "完成";
+    public static String DIALOG_CANCEL_LABEL = "取消";
+    public static String RESET_BUTTON_LABEL = "重置";
+    public static String ADD_BUTTON_LABEL = "添加";
+    public static String REMOVE_BUTTON_LABEL = "移除";
+    public static String EDIT_BUTTON_LABEL = "编辑";
+    public static String IMPORT_BUTTON_LABEL = "导入";
+    public static String CREATE_BUTTON_LABEL = "创建";
+    public static final String NONE_LABEL = "无";
 
     public static final String ADD_ROW_BUTTON_NAME = "add.row.button";
     public static final String REM_ROW_BUTTON_NAME = "rem.row.button";

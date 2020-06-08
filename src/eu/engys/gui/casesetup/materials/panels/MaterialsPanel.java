@@ -66,9 +66,9 @@ import eu.engys.util.ui.builder.PanelBuilder;
 
 public class MaterialsPanel extends AbstractGUIPanel {
 
-    public static final String MATERIALS = "Materials";
-    public static final String CHANGE_MATERIAL = "Change Material";
-    private static final String MATERIAL_CHANGED_WARNING = "A material has been changed.\nAll fields default settings are going to be reset now.\nContinue?";
+    public static final String MATERIALS = "流体材料";
+    public static final String CHANGE_MATERIAL = "更改材料";
+    private static final String MATERIAL_CHANGED_WARNING = "发现材料更改。\n所有字段的默认设置需要重置。\n继续？";
     public static final String MATERIALS_DATABASE_DIALOG_NAME = "materials.database.dialog";
 
     private JDialog dialog;
@@ -146,7 +146,7 @@ public class MaterialsPanel extends AbstractGUIPanel {
         buttonsPanel.add(okButton);
         buttonsPanel.add(cancelButton);
 
-        dialog = new JDialog(UiUtil.getActiveWindow(), "Materials Database", JDialog.DEFAULT_MODALITY_TYPE);
+        dialog = new JDialog(UiUtil.getActiveWindow(), "材料数据库", JDialog.DEFAULT_MODALITY_TYPE);
         dialog.setName(MATERIALS_DATABASE_DIALOG_NAME);
         dialog.setSize(700, 500);
         dialog.setLocationRelativeTo(null);
@@ -243,13 +243,13 @@ public class MaterialsPanel extends AbstractGUIPanel {
     private final class OkDialogAction extends AbstractAction {
 
         public OkDialogAction() {
-            super("OK");
+            super(UiUtil.DIALOG_OK_LABEL);
         }
 
         @Override
         public void actionPerformed(ActionEvent e) {
             if (model.getState().getMultiphaseModel().isMultiphase()) {
-                int retVal = JOptionPane.showConfirmDialog(UiUtil.getActiveWindow(), MATERIAL_CHANGED_WARNING, "Material Changed", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
+                int retVal = JOptionPane.showConfirmDialog(UiUtil.getActiveWindow(), MATERIAL_CHANGED_WARNING, "材料更改", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
                 if (retVal != JOptionPane.OK_OPTION) {
                     return;
                 }
@@ -318,7 +318,7 @@ public class MaterialsPanel extends AbstractGUIPanel {
     private final class CancelDialogAction extends AbstractAction implements Runnable {
 
         public CancelDialogAction() {
-            super("Cancel");
+            super(UiUtil.DIALOG_CANCEL_LABEL);
         }
 
         @Override

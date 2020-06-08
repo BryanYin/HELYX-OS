@@ -48,7 +48,7 @@ import eu.engys.util.ui.UiUtil;
 
 public class AdPanel extends JPanel {
 
-    private static final String ENGYS = "ENGYS" + Symbols.REGISTERED;
+    private static final String DATAOCEAN = "DATAOCEAN" + Symbols.REGISTERED;
 
     public static final Icon FAQ = ResourcesUtil.getIcon("helyxos.faq");
     public static final Icon ENGYS_PRODUCTS = ResourcesUtil.getIcon("helyxos.products");
@@ -61,11 +61,11 @@ public class AdPanel extends JPanel {
         super(new BorderLayout());
         layoutComponents();
 
-        setBorder(BorderFactory.createTitledBorder(ENGYS + " products"));
+        // setBorder(BorderFactory.createTitledBorder(DATAOCEAN + " products"));
     }
 
     private void layoutComponents() {
-        createCentralPanel();
+        // createCentralPanel();
         createSouthPanel();
     }
 
@@ -80,8 +80,8 @@ public class AdPanel extends JPanel {
 
     private void createSouthPanel() {
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        buttonsPanel.add(createShowImageButton("FAQ", FAQ));
-        buttonsPanel.add(createShowImageButton("Products Comparison", ENGYS_PRODUCTS));
+        // buttonsPanel.add(createShowImageButton("FAQ", FAQ));
+        // buttonsPanel.add(createShowImageButton("Products Comparison", ENGYS_PRODUCTS));
         buttonsPanel.add(createOpenEngysSiteButton());
 
         JPanel southPanel = new JPanel(new GridLayout(2, 1));
@@ -118,11 +118,11 @@ public class AdPanel extends JPanel {
     }
 
     private JButton createOpenEngysSiteButton() {
-        return new JButton(new AbstractAction(ENGYS + " Website") {
+        return new JButton(new AbstractAction(DATAOCEAN + " 网站") {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    Util.openWebpage(new URL("http://www.engys.com"));
+                    Util.openWebpage(new URL("http://www.dataocean.com.cn"));
                 } catch (MalformedURLException e1) {
                     e1.printStackTrace();
                 }

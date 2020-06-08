@@ -219,8 +219,8 @@ public class MomentumPatch extends MomentumParametersPanel {
         /* ---- */
         JPanel velocityPanel = velocityBuilder.getPanel();
         JPanel pressurePanel = pressureBuilder.getPanel();
-        velocityPanel.setBorder(BorderFactory.createTitledBorder("Velocity"));
-        pressurePanel.setBorder(BorderFactory.createTitledBorder("Pressure"));
+        velocityPanel.setBorder(BorderFactory.createTitledBorder("速度"));
+        pressurePanel.setBorder(BorderFactory.createTitledBorder("压力"));
         builder.addComponent(velocityPanel);
         builder.addComponent(pressurePanel);
     }

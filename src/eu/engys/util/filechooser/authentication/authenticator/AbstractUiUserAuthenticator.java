@@ -66,7 +66,7 @@ public abstract class AbstractUiUserAuthenticator implements OtrosUserAuthentica
 				JPanel panel = new JPanel(new BorderLayout());
 				panel.add(authOptionPanel);
 
-				String[] options = { "OK", "Cancel" };
+				String[] options = { UiUtil.DIALOG_OK_LABEL, UiUtil.DIALOG_CANCEL_LABEL };
 				int showConfirmDialog = JOptionPane.showOptionDialog(UiUtil.getActiveWindow(), panel, title, JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
 				if (showConfirmDialog != JOptionPane.OK_OPTION) {
 					return;

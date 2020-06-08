@@ -107,13 +107,13 @@ public abstract class CellSetDialog extends JPanel {
         buttonsPanel.add(new JButton(new AddRowAction(Type.RING)){{ setName(CELLSET_ADD_NAME + ".ring");}});
         
         JPanel okPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        okButton = new JButton(new AbstractAction("OK") {
+        okButton = new JButton(new AbstractAction(UiUtil.DIALOG_OK_LABEL) {
             @Override
             public void actionPerformed(ActionEvent e) {
                 handleDialogClose();
             }
         });
-        okButton.setName("OK");
+        okButton.setName(UiUtil.DIALOG_OK_LABEL);
         okPanel.add(okButton);
 
         rowsPanel = new JPanel(new GridBagLayout());

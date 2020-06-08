@@ -55,6 +55,7 @@ public class BoxEventButton extends JToggleButton {
                 }
             }
         });
+        getAction().putValue("ShortDescription", "显示边界");
         setPreferredSize(new Dimension(36, 48));
         setIcon(ICON_OFF);
         setSelectedIcon(ICON_ON);

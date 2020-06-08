@@ -28,7 +28,7 @@ import static eu.engys.util.ui.UiUtil.NONE_LABEL;
 
 public enum Time {
 
-    STEADY("steady", "Steady"), TRANSIENT("transient", "Transient"), NONE("none", NONE_LABEL);
+    STEADY("steady", "稳态"), TRANSIENT("transient", "瞬态"), NONE("none", NONE_LABEL);
 
     private String key;
     private String label;

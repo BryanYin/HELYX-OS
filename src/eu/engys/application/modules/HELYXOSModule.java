@@ -187,9 +187,9 @@ public class HELYXOSModule extends AbstractModule {
     }
 
     private void configurePanels() {
-        bind(String.class).annotatedWith(Mesh.class).toInstance("Mesh");
-        bind(String.class).annotatedWith(CaseSetup.class).toInstance("Case Setup");
-        bind(String.class).annotatedWith(Solver.class).toInstance("Solver");
+        bind(String.class).annotatedWith(Mesh.class).toInstance("网格");
+        bind(String.class).annotatedWith(CaseSetup.class).toInstance("用例设置");
+        bind(String.class).annotatedWith(Solver.class).toInstance("求解器");
 
         bind(View3DElement.class).annotatedWith(Mesh.class).to(Mesh3DElement.class);
         bind(View3DElement.class).annotatedWith(CaseSetup.class).to(CaseSetup3DElement.class);

@@ -96,13 +96,13 @@ public abstract class AbstractController implements Controller, ActionContainer 
     public static final String OPEN_PARAMETERS_MANAGER = "application.parameters.manager";
     public static final String SAVE_SCREENSHOT = "save.screenshot";
 
-    public static final String STOP_SOLVER_LABEL = "Stop Solver";
-    public static final String KILL_SOLVER_LABEL = "Kill Solver";
+    public static final String STOP_SOLVER_LABEL = "停止求解器";
+    public static final String KILL_SOLVER_LABEL = "强制停止求解器";
 
-    public static final String STOP_EXECUTION = "Stop Execution";
-    public static final String KILL_PROCESS = "Kill Process";
+    public static final String STOP_EXECUTION = "停止执行";
+    public static final String KILL_PROCESS = "终止进程";
 
-    public static final String CANCEL = "Cancel";
+    public static final String CANCEL = "取消";
     public static final String CONTINUE_IN_BATCH = "Continue in Batch";
 
     public static final String PARALLEL_WORKS = "application.parallel.works";
@@ -225,7 +225,7 @@ public abstract class AbstractController implements Controller, ActionContainer 
         public void run() {
             File workDir = PrefUtil.getWorkDir(PrefUtil.WORK_DIR);
             HelyxFileChooser fileChooser = new HelyxFileChooser(workDir.getAbsolutePath());
-            fileChooser.setTitle("Open");
+            fileChooser.setTitle("打开");
             fileChooser.setSelectionMode(SelectionMode.DIRS_AND_ARCHIVES);
 
             View3DOptions options = new View3DOptions();
@@ -238,7 +238,7 @@ public abstract class AbstractController implements Controller, ActionContainer 
                     ActionManager.getInstance().invoke("application.startup.hide");
                     return;
                 }
-                JOptionPane.showMessageDialog(UiUtil.getActiveWindow(), selectedCase + "\n appears not to be a valid case folder", "File System Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(UiUtil.getActiveWindow(), selectedCase + "\n 好像不是用例目录", "文件系统错误", JOptionPane.ERROR_MESSAGE);
             }
             return;
         }
@@ -427,7 +427,7 @@ public abstract class AbstractController implements Controller, ActionContainer 
                 if (model.getProject().getBaseDir().getAbsoluteFile().getParentFile().equals(workDir)) {
                     fileChooser.selectFile(model.getProject().getBaseDir());
                 }
-                fileChooser.setTitle("Save As");
+                fileChooser.setTitle("另存为");
                 fileChooser.setSelectionMode(SelectionMode.DIRS_ONLY);
 
                 ReturnValue returnValue = fileChooser.showSaveAsDialog();
@@ -513,7 +513,7 @@ public abstract class AbstractController implements Controller, ActionContainer 
 
     @Override
     public boolean allowActionsOnRunning(boolean shouldAskConfirmation) {
-        String exitMessage = EXIT_LABEL + " " + ApplicationInfo.getName() + "?";
+        String exitMessage = EXIT_LABEL + " DO-CFD " + "?";
 
         boolean thereIsACaseLoaded = model != null && model.getSolverModel() != null;
         if (thereIsACaseLoaded) {

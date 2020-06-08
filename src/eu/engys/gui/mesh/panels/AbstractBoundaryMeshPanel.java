@@ -51,7 +51,7 @@ import net.java.dev.designgridlayout.Componentizer;
 
 public abstract class  AbstractBoundaryMeshPanel extends AbstractGUIPanel {
 
-    public static final String TITLE = "Mesh";
+    public static final String TITLE = "网格";
     
     private BoundaryMeshTreeNodeManager treeNodeManager;
 
@@ -99,15 +99,15 @@ public abstract class  AbstractBoundaryMeshPanel extends AbstractGUIPanel {
         created = labelField("");
 
         PanelBuilder properties = new PanelBuilder();
-        properties.addComponent("Name", name);
-        properties.addComponent("Path", path);
-        properties.addComponent("Created", created);
+        properties.addComponent("名称", name);
+        properties.addComponent("路径", path);
+        properties.addComponent("创建时间", created);
         
         meshInfoPanel = new MeshInfoPanel();
 
         builder = new PanelBuilder();
-        builder.addComponent(actions.withTitle("Actions").getPanel());
-        builder.addComponent(properties.withTitle("Properties").getPanel());
+        builder.addComponent(actions.withTitle("操作").getPanel());
+        builder.addComponent(properties.withTitle("属性").getPanel());
         addExtraComponents(builder);
         builder.addComponent(meshInfoPanel.getStatistics(), meshInfoPanel.getCellType());
         builder.addComponent(meshInfoPanel.getDataArrays());

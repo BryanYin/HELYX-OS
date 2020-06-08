@@ -44,7 +44,7 @@ import eu.engys.util.ui.textfields.DoubleField;
 public class GPanel extends JPanel {
 
     public static final String G = "g [m/s" + Symbols.SQUARE + "]";
-    public static final String GRAVITY = "Gravity";
+    public static final String GRAVITY = "重力";
     private PanelBuilder builder;
     private DoubleField[] gFields;
 

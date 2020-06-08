@@ -45,7 +45,7 @@ import eu.engys.util.ui.builder.PanelBuilder;
 
 public class SolverBoundaryMeshPanel extends AbstractGUIPanel {
 
-    public static final String TITLE = "Mesh";
+    public static final String TITLE = "网格";
     private static final DecimalFormat formatter = new DecimalFormat("#.###", new DecimalFormatSymbols(Locale.US));
 
     private BoundaryMeshTreeNodeManager treeNodeManager;
@@ -72,12 +72,12 @@ public class SolverBoundaryMeshPanel extends AbstractGUIPanel {
         meshInfoPanel = new MeshInfoPanel();
 
         PanelBuilder properties = new PanelBuilder();
-        properties.addComponent("Name", name);
-        properties.addComponent("Path", path);
-        properties.addComponent("Created", created);
+        properties.addComponent("名称", name);
+        properties.addComponent("路径", path);
+        properties.addComponent("创建时间", created);
 
         PanelBuilder builder = new PanelBuilder();
-        builder.addComponent(properties.withTitle("Properties").getPanel());
+        builder.addComponent(properties.withTitle("属性").getPanel());
         builder.addComponent(meshInfoPanel.getStatistics(), meshInfoPanel.getCellType());
         builder.addComponent(meshInfoPanel.getDataArrays());
         builder.addComponent(meshInfoPanel.getBounds());

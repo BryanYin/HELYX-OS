@@ -65,9 +65,9 @@ import eu.engys.util.ui.textfields.StringField;
 
 public class BoundaryConditionsPanel extends AbstractGUIPanel implements IBoundaryConditionsPanel {
 
-    public static final String BOUNDARY_CONDITIONS = "Boundary Conditions";
-    public static final String PATCH_TYPE_LABEL = "Patch Type";
-    public static final String PATCH_NAME_LABEL = "Patch Name";
+    public static final String BOUNDARY_CONDITIONS = "边界条件";
+    public static final String PATCH_TYPE_LABEL = "切面类型";
+    public static final String PATCH_NAME_LABEL = "切面名称";
 
     private CardLayout centerPanelLayout;
     private JPanel centerPanel;

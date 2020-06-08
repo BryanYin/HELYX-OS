@@ -50,7 +50,7 @@ public class OpenMeshAdvancedOptionsDialog extends ViewAction {
     public static final Icon OPEN_OPTIONS_ICON = ResourcesUtil.getIcon("mesh.options.icon");
     public static final String OPEN_OPTIONS_DIALOG_TOOLTIP = ResourcesUtil.getString("mesh.options.tooltip");
 
-    public static final String ADVANCED_OPTIONS = "Advanced Options";
+    public static final String ADVANCED_OPTIONS = "高级选项";
 
     private JDialog dialog;
     private DefaultMeshAdvancedOptionsPanel optionsPanel;

@@ -133,7 +133,7 @@ public class StartPanel extends JPanel {
         JPanel recentPanel = createRecentPanel();
 
         JPanel titlePanel = new JPanel(new GridBagLayout());
-        titlePanel.setBorder(BorderFactory.createTitledBorder("Select an action"));
+        titlePanel.setBorder(BorderFactory.createTitledBorder("选择操作"));
         titlePanel.setOpaque(false);
         titlePanel.add(buttonsPanel, new GridBagConstraints(0, 0, 1, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(10, 10, 10, 10), 0, 0));
         titlePanel.add(recentPanel, new GridBagConstraints(1, 0, 1, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.VERTICAL, new Insets(10, 10, 10, 10), 0, 0));

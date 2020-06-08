@@ -101,7 +101,7 @@ public class AboutWindow {
     private JPanel createCloseButtonPanel() {
         JPanel panel = new JPanel(new FlowLayout());
         panel.setBackground(Color.WHITE);
-        panel.add(new JButton(new AbstractAction("Close") {
+        panel.add(new JButton(new AbstractAction("关闭") {
             @Override
             public void actionPerformed(ActionEvent e) {
                 window.dispose();

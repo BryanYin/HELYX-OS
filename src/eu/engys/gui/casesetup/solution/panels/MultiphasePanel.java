@@ -41,8 +41,8 @@ import eu.engys.util.ui.textfields.SpinnerField;
 
 public abstract class MultiphasePanel extends JPanel implements MultiphaseBuilder {
 
-    public static final String PHASES_LABEL = "Phases";
-    private static final String MULTIPHASE = "Multiphase";
+    public static final String PHASES_LABEL = "相位";
+    private static final String MULTIPHASE = "复相位";
 
     protected SpinnerField phasesNumber;
     protected MultiphaseChooserPanel multiphaseChooser;

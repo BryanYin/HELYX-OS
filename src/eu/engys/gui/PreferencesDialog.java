@@ -202,21 +202,21 @@ public class PreferencesDialog {
 
     private JPanel createButtonsPanel() {
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        okButton = new JButton(new AbstractAction("OK") {
+        okButton = new JButton(new AbstractAction(UiUtil.DIALOG_OK_LABEL) {
             @Override
             public void actionPerformed(ActionEvent e) {
                 save();
                 dialog.setVisible(false);
             }
         });
-        okButton.setName("OK");
-        JButton cancelButton = new JButton(new AbstractAction("Cancel") {
+        okButton.setName(UiUtil.DIALOG_OK_LABEL);
+        JButton cancelButton = new JButton(new AbstractAction(UiUtil.DIALOG_CANCEL_LABEL) {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dialog.setVisible(false);
             }
         });
-        cancelButton.setName("Cancel");
+        cancelButton.setName(UiUtil.DIALOG_CANCEL_LABEL);
 
         buttonsPanel.add(okButton);
         buttonsPanel.add(cancelButton);
@@ -515,7 +515,7 @@ public class PreferencesDialog {
             addResettableComponent(miscBuilder, DOCKER_IMAGE_LABEL, dockerImage, PrefUtil.DOCKER_IMAGE);
         }
 
-        openDefaults = new JButton(new AbstractAction("Show Files") {
+        openDefaults = new JButton(new AbstractAction("显示文件") {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (dictDataFolder.toFile() != null && dictDataFolder.toFile().exists()) {
@@ -523,14 +523,14 @@ public class PreferencesDialog {
                 }
             }
         });
-        JButton resetButton = new JButton(new ViewAction("Reset", "Reset Files To Default") {
+        JButton resetButton = new JButton(new ViewAction("重置", "设置为默认") {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     FileUtils.forceDeleteOnExit(new File(new File(ApplicationInfo.getHome(), ApplicationInfo.getVersion()), "dictData"));
                 } catch (IOException e1) {
                 } finally {
-                    JOptionPane.showMessageDialog(UiUtil.getActiveWindow(), "Restart " + ApplicationInfo.getName() + " to complete this action.");
+                    JOptionPane.showMessageDialog(UiUtil.getActiveWindow(), "重启 " + ApplicationInfo.getName() + " 完成该操作");
                 }
             }
         });
@@ -548,7 +548,7 @@ public class PreferencesDialog {
     }
 
     private JButton createResetButton(final JComponent compToAdd, final String key) {
-        return new JButton(new ViewAction("Reset", "Reset Preference To Default") {
+        return new JButton(new ViewAction("重置", "重置默认配置") {
 
             @Override
             public void actionPerformed(ActionEvent e) {

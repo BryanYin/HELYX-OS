@@ -65,13 +65,13 @@ import eu.engys.util.ui.ViewAction;
 
 public class MaterialsDatabasePanel extends JPanel {
 
-    public static final String NEW_LABEL = "New";
-    public static final String COPY_LABEL = "Copy";
-    public static final String REMOVE_LABEL = "Remove";
+    public static final String NEW_LABEL = "新建";
+    public static final String COPY_LABEL = "复制";
+    public static final String REMOVE_LABEL = "移除";
 
-    public static final String NEW_TOOLTIP = "Create New Material";
-    public static final String COPY_TOOLTIP = "Copy Currently Selected Material";
-    public static final String REMOVE_TOOLTIP = "Remove Currently Selected Material";
+    public static final String NEW_TOOLTIP = "创建新材料";
+    public static final String COPY_TOOLTIP = "复制当前选中材料";
+    public static final String REMOVE_TOOLTIP = "移除当前选中材料";
 
     public static final String COPY_OF_SUFFIX = "_copy";
     public static final String USER_LIBRARY_LIST_NAME = "user.library.list";
@@ -126,8 +126,8 @@ public class MaterialsDatabasePanel extends JPanel {
 
         JSplitPane leftSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
         leftSplitPane.setOneTouchExpandable(false);
-        leftSplitPane.setTopComponent(configureList(defaultMaterialsList, "Default Library"));
-        leftSplitPane.setBottomComponent(configureList(userMaterialsList, "User Library"));
+        leftSplitPane.setTopComponent(configureList(defaultMaterialsList, "默认库"));
+        leftSplitPane.setBottomComponent(configureList(userMaterialsList, "用户库"));
 
         JComponent buttonsPanel = UiUtil.getCommandColumn(getButtons());
         buttonsPanel.setBorder(BorderFactory.createEmptyBorder(UiUtil.TWO_SPACES, UiUtil.TWO_SPACES, 0, UiUtil.TWO_SPACES));

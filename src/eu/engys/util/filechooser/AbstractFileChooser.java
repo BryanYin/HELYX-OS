@@ -108,13 +108,13 @@ public class AbstractFileChooser {
 	private String createTitle() {
 		switch (selectionMode) {
 		case DIRS_ONLY:
-			return "Select Folder";
+			return "选择文件夹";
 		case FILES_ONLY:
-			return "Select File";
+			return "选择文件";
 		case DIRS_AND_FILES:
-			return "Select File or Folder";
+			return "选择文件或者目录";
 		default:
-			return "Select File or Folder";
+			return "选择文件或者目录";
 		}
 	}
 	

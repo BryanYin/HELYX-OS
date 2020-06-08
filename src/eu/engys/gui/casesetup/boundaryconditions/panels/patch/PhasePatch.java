@@ -95,7 +95,7 @@ public class PhasePatch extends PhaseParametersPanel {
     @Override
     public void populatePanel() {
         resetToDefault(null);
-        builder.startChoice("Type");
+        builder.startChoice("类型");
         buildFixedValues();
         buildInletOutlet();
         buildZeroGradient();

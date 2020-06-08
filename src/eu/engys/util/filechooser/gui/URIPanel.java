@@ -63,9 +63,9 @@ public class URIPanel extends JPanel {
 	private static final Logger logger = LoggerFactory.getLogger(URIPanel.class);
 
 	public static final String NAME = "chooser.uripanel";
-	public static final String NAME_LABEL = "Name:";
-	public static final String LOOK_IN = "Look in:";
-	public static final String SAVE_IN = "Save in:";
+	public static final String NAME_LABEL = "名称：";
+	public static final String LOOK_IN = "查找目录：";
+	public static final String SAVE_IN = "保存至：";
 	private static final String ACTION_FOCUS_ON_TABLE = "FOCUS ON TABLE";
 
 	public static final String ADD_FAVORITE = "add.favorite";

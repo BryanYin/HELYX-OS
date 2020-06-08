@@ -87,9 +87,9 @@ public class ExtractLinesDialog {
     public static final String MAX_LABEL = "Max";
     public static final String OUTSIDE_LABEL = "Outside";
     public static final String INSIDE_LABEL = "Inside";
-    public static final String APPLY_LABEL = "Apply";
-    public static final String SAVE_LABEL = "Save";
-    public static final String CANCEL_LABEL = "Cancel";
+    public static final String APPLY_LABEL = "应用";
+    public static final String SAVE_LABEL = "保存";
+    public static final String CANCEL_LABEL = "取消";
 
     public static final String LINE_SUFFIX = "_line";
 

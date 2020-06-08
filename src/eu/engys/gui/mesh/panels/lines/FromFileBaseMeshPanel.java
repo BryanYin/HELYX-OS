@@ -62,11 +62,11 @@ public class FromFileBaseMeshPanel {
 
     public static final HelyxFileFilter BLOCKMESHDICT_FILE_FILTER = new HelyxFileFilter("Block Mesh Dictionary", BlockMeshDict.BLOCK_DICT);
 
-    public static final String FROM_FILE_LABEL = "From File";
+    public static final String FROM_FILE_LABEL = "从文件";
 
-    public static final String EDIT_LABEL = "Edit";
-    public static final String IMPORT_LABEL = "Import";
-    public static final String CREATE_LABEL = "Create";
+    public static final String EDIT_LABEL = "编辑";
+    public static final String IMPORT_LABEL = "导入";
+    public static final String CREATE_LABEL = "创建";
 
     private Model model;
     private Controller controller;

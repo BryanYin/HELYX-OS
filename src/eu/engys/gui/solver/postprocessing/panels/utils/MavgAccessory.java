@@ -41,8 +41,8 @@ public class MavgAccessory extends JPanel {
 
     public static final String MOVING_AVERAGE_PANEL = "moving.average.panel";
 
-    public static final String TYPE_LABEL = "Type";
-    public static final String PERIOD_LABEL = "Period";
+    public static final String TYPE_LABEL = "类型";
+    public static final String PERIOD_LABEL = "间隔";
 
     private JComboBox<String> type;
     private IntegerField periodField;

@@ -31,7 +31,7 @@ import eu.engys.core.project.zero.patches.BoundaryConditions;
 
 public abstract class MomentumParametersPanel extends AbstractParametersPanel {
 
-	public static final String MOMENTUM = "Momentum";
+	public static final String MOMENTUM = "动量指标";
 
     public MomentumParametersPanel(BoundaryTypePanel parent) {
 		super(parent);

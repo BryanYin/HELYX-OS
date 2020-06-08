@@ -32,7 +32,7 @@ import eu.engys.dynamic.DynamicModule;
 
 public class DynamicMesh implements CellZoneType {
 
-    public static final String DYNAMIC_MESH_LABEL = "Dynamic Mesh";
+    public static final String DYNAMIC_MESH_LABEL = "动态网格";
 
     private boolean enabled;
 

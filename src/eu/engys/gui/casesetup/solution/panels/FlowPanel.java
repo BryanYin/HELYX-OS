@@ -30,7 +30,7 @@ import eu.engys.util.ui.ChooserPanel;
 
 public class FlowPanel extends ChooserPanel {
 
-    public static final String FLOW = "Flow";
+    public static final String FLOW = "流";
 
     public FlowPanel() {
         super(FLOW);

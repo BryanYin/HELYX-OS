@@ -68,11 +68,11 @@ import eu.engys.util.ui.textfields.DoubleField;
 
 public class NumericalSchemesPanel extends DefaultGUIPanel {
 
-    public static final String NUMERICAL_SCHEMES = "Numerical Schemes";
-    public static final String LAPLACIAN_LABEL = "Laplacian";
-    public static final String ADVECTION_LABEL = "Advection";
+    public static final String NUMERICAL_SCHEMES = "数值格式";
+    public static final String LAPLACIAN_LABEL = "拉普拉斯算子";
+    public static final String ADVECTION_LABEL = "平流";
 
-    public static final String NON_ORTHOGONAL_CORRECTION_LABEL = "Non-orthogonal Correction";
+    public static final String NON_ORTHOGONAL_CORRECTION_LABEL = "非正交修正";
     public static final String GAUSS_LINEAR_LIMITED = "Gauss linear limited";
     public static final String GAUSS_LINEAR_LIMITED_CORRECTED = "Gauss linear limited corrected";
     public static final String GAUSS_LINEAR_UNCORRECTED = "Gauss linear uncorrected";

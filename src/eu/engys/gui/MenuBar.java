@@ -61,12 +61,12 @@ import eu.engys.util.ui.ResourcesUtil;
 
 public class MenuBar extends JMenuBar implements RecentItemsObserver {
 
-    public static final String FILE_MENU = "File";
-    public static final String EDIT_MENU = "Edit";
-    public static final String DICTIONARIES_MENU = "Dictionaries";
-    public static final String HELP_MENU = "Help";
+    public static final String FILE_MENU = "文件";
+    public static final String EDIT_MENU = "设置";
+    public static final String DICTIONARIES_MENU = "系统文件";
+    public static final String HELP_MENU = "帮助";
 
-    private static final String OPEN_RECENT_MENU = "Open Recent";
+    private static final String OPEN_RECENT_MENU = "打开最近";
 
     public static final Icon OPEN_ICON = ResourcesUtil.getIcon("application.open.icon");
     public static final Icon FILE_ICON = ResourcesUtil.getIcon("file.icon");
@@ -115,7 +115,7 @@ public class MenuBar extends JMenuBar implements RecentItemsObserver {
 
         add(fileMenu);
         add(editMenu);
-//        add(dictionariesMenu);
+        add(dictionariesMenu);
         add(helpMenu);
         
         RecentItems.getInstance().addObserver(this);
@@ -158,7 +158,7 @@ public class MenuBar extends JMenuBar implements RecentItemsObserver {
                 });
             }
             recentCasesMenu.addSeparator();
-            recentCasesMenu.add(new AbstractAction("Clear") {
+            recentCasesMenu.add(new AbstractAction("清除") {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     RecentItems.getInstance().clear();

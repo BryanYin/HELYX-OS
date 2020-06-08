@@ -77,7 +77,7 @@ public class DefaultProjectReader extends AbstractProjectReader {
             ControlDict controlDict = prj.getSystemFolder().getControlDict();
             if (controlDict != null) {
                 if (controlDict.isBinary()) {
-                    monitor.error("Binary fields format not supported");
+                    monitor.error("不支持二进制字段格式");
                 } else {
                     prj.getSystemFolder().readProjectDict(model, monitor, prj.getSystemFolder().getFileManager().getFile());
                     logger.info("### Read mesh: '{}' ### ", prj.getZeroFolder().getFileManager().getFile());
@@ -106,7 +106,7 @@ public class DefaultProjectReader extends AbstractProjectReader {
             }
             DefaultGeometryFactory.clearSTLCache();
         } else {
-            monitor.error(baseDir + " not found");
+            monitor.error(baseDir + " 无此目录");
         }
         logger.info("################## End Read ################## ");
     }
@@ -114,55 +114,55 @@ public class DefaultProjectReader extends AbstractProjectReader {
     
     private void defaultRead() {
         monitor.info("");
-        monitor.info("Reading Project");
+        monitor.info("正在读取项目");
         openFOAMProject project = model.getProject();
 
-        monitor.info("-> Reading Constant Folder");
+        monitor.info("-> 读取 Constant 目录");
         project.getConstantFolder().read(model, monitor);
 
-        monitor.info("-> Reading System Folder");
+        monitor.info("-> 读取 System 目录");
         project.getSystemFolder().read(model, ffoTypes, mfoTypes, monitor);
 
         new SolverModelReader(model.getSolverModel()).load(project.getSystemFolder().getProjectDict());
         
         new MeshInfoReader(model).read();
 
-        monitor.info("-> Reading Geometry");
+        monitor.info("-> 读取 几何图形");
         model.getGeometry().loadGeometry(model, monitor);
         
-        monitor.info("-> Reading Modules Data");
+        monitor.info("-> 读取 模块数据");
         ModulesUtil.read(modules);
         
-        monitor.info("-> Reading State");
+        monitor.info("-> 读取 状态");
         StateBuilder.loadState(model, solversTable, monitor);
 
-        monitor.info("-> Reading Modules State");
+        monitor.info("-> 读取 模块状态");
         ModulesUtil.loadState(modules);
 
         /*
          * Call updateSolver after loadState because some module may need some other module 
          * state in order to select the correct solver (e.g. Dynamic and VOF)
          */
-        monitor.info("-> Reading Solver");
+        monitor.info("-> 读取 求解器");
         solversTable.updateSolver(model.getState());
 
-        monitor.info("-> Reading Modules Solver");
+        monitor.info("-> 读取 模块求解器");
         ModulesUtil.updateSolver(modules, model.getState());
 
-        monitor.info("-> Reading Materials");
+        monitor.info("-> 读取 流体材料");
         model.getMaterials().loadMaterials(model, materialsReader, monitor);
         ModulesUtil.loadMaterials(modules);
 
-        monitor.info("-> Reading Zero Folder");
+        monitor.info("-> 读取 0 目录");
         ControlDict controlDict = project.getSystemFolder().getControlDict();
         if (controlDict != null) {
             if (controlDict.isBinary()) {
-                monitor.error("Binary fields format not supported", 1);
+                monitor.error("不支持二进制字段格式", 1);
             } else {
                 project.getZeroFolder().read(model, cellZoneBuilder, modules, initialisation, monitor);
             }
         } else {
-            monitor.error("No control dict found", 1);
+            monitor.error("没有发现控制 dict 文件", 1);
         }
 
         if (!model.getPatches().isEmpty()) {

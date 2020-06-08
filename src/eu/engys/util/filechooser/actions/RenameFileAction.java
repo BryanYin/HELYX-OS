@@ -48,19 +48,20 @@ import eu.engys.util.filechooser.gui.FileChooserController;
 import eu.engys.util.filechooser.table.FileSystemTableModel;
 import eu.engys.util.filechooser.util.VFSUtils;
 import eu.engys.util.ui.ResourcesUtil;
+import eu.engys.util.ui.UiUtil;
 import eu.engys.util.ui.textfields.StringField;
 
 public class RenameFileAction extends AbstractAction {
 	
 	private static final Logger logger = LoggerFactory.getLogger(RenameFileAction.class);
 
-	private static final String TITLE = "Rename file";
-	private static final String PROMPT = "File name";
+	private static final String TITLE = "重命名文件";
+	private static final String PROMPT = "文件名称";
 	public static final String TEXTFIELD_NAME = "fileobject.name";
-	public static final String CANCEL_LABEL = "Cancel";
-	public static final String RENAME_LABEL = "Rename";
-	private static final String FILE_ALREADY_EXISTS = "File already exist";
-	private static final String EMPTY_NAME_MESSAGE = "Cannot create file or folder with empty name!";
+	public static final String CANCEL_LABEL = UiUtil.DIALOG_CANCEL_LABEL;
+	public static final String RENAME_LABEL = "重命名";
+	private static final String FILE_ALREADY_EXISTS = "文件已经存在";
+	private static final String EMPTY_NAME_MESSAGE = "不能用空文件名创建文件或者目录";
 
 	private FileChooserController controller;
 	private JTable table;

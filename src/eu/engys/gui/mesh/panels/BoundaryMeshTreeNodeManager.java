@@ -80,8 +80,8 @@ public class BoundaryMeshTreeNodeManager extends DefaultTreeNodeManager<VisibleI
         this.cellZonesMap = new HashMap<>();
         this.faceZonesMap = new HashMap<>();
 
-        patches = new RootVisibleLoadableTreeNode("Patches");
-        cellZones = new RootVisibleLoadableTreeNode("Cell Zones");
+        patches = new RootVisibleLoadableTreeNode("切面");
+        cellZones = new RootVisibleLoadableTreeNode("网格区域");
 //        faceZones = new RootVisibleLoadableTreeNode("Face Zones");
         root.add(patches);
         root.add(cellZones);

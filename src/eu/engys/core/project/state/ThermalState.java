@@ -26,9 +26,9 @@ package eu.engys.core.project.state;
 
 public class ThermalState {
 
-    public static final String THERMAL = "Thermal";
-    public static final String ENERGY = "Energy";
-    public static final String BUOYANCY = "Buoyancy";
+    public static final String THERMAL = "热能";
+    public static final String ENERGY = "能量";
+    public static final String BUOYANCY = "升力";
     
     private boolean energy;
     private boolean buoyancy;

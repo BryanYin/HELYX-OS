@@ -52,15 +52,15 @@ import eu.engys.util.ui.textfields.StringField;
 
 public abstract class AbstractIncompressibleMaterialsPanel implements IncompressibleMaterialsPanel, PropertyChangeListener {
 
-    public static final String REFERENCE_TEMPERATURE_K_LABEL = "Reference Temperature [K]";
-    public static final String REFERENCE_ABSOLUTE_PRESSURE_PA_LABEL = "Reference (absolute) Pressure [Pa]";
-    public static final String THERMAL_CONDUCTIVITY_LABEL = "Thermal Conductivity [W/m" + DOT + "K]";
-    public static final String TURBULENT_PRANDTL_NUMBER_LABEL = "Turbulent Prandtl Number";
-    public static final String SPECIFIC_HEAT_CAPACITY_LABEL = "Specific Heat Capacity " + CP;
-    public static final String KINEMATIC_VISCOSITY_LABEL = "Kinematic Viscosity " + NU_MEASURE;
-    public static final String DYNAMIC_VISCOSITY_LABEL = "Dynamic Viscosity " + MU_MEASURE;
-    public static final String DENSITY_LABEL = "Density " + DENSITY;
-    public static final String THERMAL_EXPANTION_COEFF_LABEL = "Thermal Expansion Coefficient [K" + MINUS_ONE + "]";
+    public static final String REFERENCE_TEMPERATURE_K_LABEL = "参考温度 [K]";
+    public static final String REFERENCE_ABSOLUTE_PRESSURE_PA_LABEL = "参考（绝对）压强 [Pa]";
+    public static final String THERMAL_CONDUCTIVITY_LABEL = "导热系数 [W/m" + DOT + "K]";
+    public static final String TURBULENT_PRANDTL_NUMBER_LABEL = "湍流普朗特数";
+    public static final String SPECIFIC_HEAT_CAPACITY_LABEL = "比热容量 " + CP;
+    public static final String KINEMATIC_VISCOSITY_LABEL = "运动粘度 " + NU_MEASURE;
+    public static final String DYNAMIC_VISCOSITY_LABEL = "动力粘度 " + MU_MEASURE;
+    public static final String DENSITY_LABEL = "密度 " + DENSITY;
+    public static final String THERMAL_EXPANTION_COEFF_LABEL = "热膨胀系数 [K" + MINUS_ONE + "]";
 
 //    protected DictionaryModel incompressibleModel = new DictionaryModel("newMaterial", getEmptyMaterial());
 
@@ -97,7 +97,7 @@ public abstract class AbstractIncompressibleMaterialsPanel implements Incompress
     }
 
     protected void buildIncompressibleMaterialPanel() {
-        builder.addComponent("Name", nameField = materialModel.bindLabel(IncompressibleMaterial.NAME_KEY));
+        builder.addComponent("名称", nameField = materialModel.bindLabel(IncompressibleMaterial.NAME_KEY));
         builder.addComponent(DENSITY_LABEL, rho = materialModel.bindDoublePositive(IncompressibleMaterial.RHO_KEY));
         builder.addComponent(DYNAMIC_VISCOSITY_LABEL, mu = materialModel.bindDoublePositive(IncompressibleMaterial.MU_KEY));
         builder.addComponent(KINEMATIC_VISCOSITY_LABEL, nu = materialModel.bindDoublePositive(IncompressibleMaterial.NU_KEY));

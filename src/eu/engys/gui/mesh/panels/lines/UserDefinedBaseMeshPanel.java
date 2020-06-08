@@ -56,12 +56,12 @@ import eu.engys.util.ui.textfields.IntegerField;
 
 public class UserDefinedBaseMeshPanel {
 
-    public static final String USER_DEFINED_LABEL = "User Defined";
+    public static final String USER_DEFINED_LABEL = "自定义";
 
-    public static final String MIN_LABEL = "Min " + Symbols.M;
-    public static final String MAX_LABEL = "Max " + Symbols.M;
-    public static final String N_ELEMENTS_LABEL = "Elements";
-    public static final String CELL_SIZE_LABEL = "Cell Size " + Symbols.M;
+    public static final String MIN_LABEL = "最小 " + Symbols.M;
+    public static final String MAX_LABEL = "最大 " + Symbols.M;
+    public static final String N_ELEMENTS_LABEL = "网格数";
+    public static final String CELL_SIZE_LABEL = "网格大小 " + Symbols.M;
 
     private final static Icon FIT_ICON = ResourcesUtil.getIcon("fit.boundingbox.icon");
 
@@ -223,7 +223,7 @@ public class UserDefinedBaseMeshPanel {
 
         public FitBoundingBoxAction() {
             super("", FIT_ICON);
-            putValue(SHORT_DESCRIPTION, "Fit Bounding Box");
+            putValue(SHORT_DESCRIPTION, "匹配边界");
         }
 
         @Override

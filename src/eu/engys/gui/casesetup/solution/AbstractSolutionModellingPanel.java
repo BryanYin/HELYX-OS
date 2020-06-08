@@ -83,11 +83,11 @@ public abstract class AbstractSolutionModellingPanel extends DefaultGUIPanel imp
 
     private static final Logger logger = LoggerFactory.getLogger(AbstractSolutionModellingPanel.class);
 
-    private static final String STATE_CHANGED_WARNING = "Solution state has been changed.\nAll fields default settings are going to be reset now.\nContinue?";
+    private static final String STATE_CHANGED_WARNING = "求解状态发生改变。\n所有字段将会还原默认设置。\n继续?";
 
-    public static final String SOLUTION_MODELLING = "Solution Modelling";
+    public static final String SOLUTION_MODELLING = "求解模型";
     
-    private static final String DYNAMIC = "Dynamic Mesh";
+    private static final String DYNAMIC = "动态网格";
 
     protected Set<ApplicationModule> modules;
     private Table15 solversTable;
@@ -176,7 +176,7 @@ public abstract class AbstractSolutionModellingPanel extends DefaultGUIPanel imp
     @Override
     public void save() {
         if (stateHasChanged()) {
-            if (JOptionPane.showConfirmDialog(UiUtil.getActiveWindow(), STATE_CHANGED_WARNING, "State Changed", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE) == JOptionPane.OK_OPTION) {
+            if (JOptionPane.showConfirmDialog(UiUtil.getActiveWindow(), STATE_CHANGED_WARNING, "状态变更", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE) == JOptionPane.OK_OPTION) {
                 _save();
             } else {
                 load();

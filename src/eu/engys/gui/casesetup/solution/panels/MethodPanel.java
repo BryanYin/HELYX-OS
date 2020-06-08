@@ -33,7 +33,7 @@ import eu.engys.util.ui.ChooserPanel;
 
 public class MethodPanel extends ChooserPanel {
 
-    public static final String TURBULENCE = "Turbulence";
+    public static final String TURBULENCE = "湍流";
 
     public MethodPanel() {
         super(TURBULENCE);

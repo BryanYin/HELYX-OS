@@ -80,11 +80,11 @@ public class ApplicationToolBar {
         toolbar.add(createToolBarButton(ActionManager.getInstance().get(BROWSE_CASE)));
 
         // add the run cloud button
-        toolbar.addSeparator();
-        if (ActionManager.getInstance().contains(PARALLEL_WORKS)) {
-            toolbar.add(createToolBarButton(ActionManager.getInstance().get(PARALLEL_WORKS)));
-            ActionManager.getInstance().get(PARALLEL_WORKS).setEnabled(false);
-        }
+        // toolbar.addSeparator();
+        // if (ActionManager.getInstance().contains(PARALLEL_WORKS)) {
+        //     toolbar.add(createToolBarButton(ActionManager.getInstance().get(PARALLEL_WORKS)));
+        //     ActionManager.getInstance().get(PARALLEL_WORKS).setEnabled(false);
+        // }
 
         ViewAction connectionAction = ActionManager.getInstance().get(OPEN_RUN_MODE);
         if (ActionManager.getInstance().contains(OPEN_RUN_MODE)) {

@@ -38,7 +38,7 @@ import eu.engys.core.project.zero.patches.BoundaryConditions;
 
 public abstract class TurbulenceParametersPanel extends AbstractParametersPanel {
 
-	public static final String TURBULENCE = "Turbulence";
+	public static final String TURBULENCE = "湍流";
 
 	private TurbulenceModelType type;
 

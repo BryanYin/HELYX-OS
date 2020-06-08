@@ -62,10 +62,10 @@ import eu.engys.util.ui.textfields.StringField;
 public class STLAccessory implements Accessory {
 
 
-    public static final String GEOMETRY_IS_IN_MM = "Geometry is in mm";
+    public static final String GEOMETRY_IS_IN_MM = "几何体大小按毫米";
     public static final String NAME = "stl.accessory";
     
-    private final String[] COLUMN_NAMES = { "Part Name", "X", "Y", "Z", "X", "Y", "Z", "X", "Y", "Z" };
+    private final String[] COLUMN_NAMES = { "部分名称", "X", "Y", "Z", "X", "Y", "Z", "X", "Y", "Z" };
     private DefaultTableModel tableModel;
     private JTable table;
     private AffineTransform[] transformations;

@@ -205,20 +205,20 @@ public class ScriptEditor {
 
 	private JPanel createButtonsPanel() {
 		JButton importButton = new JButton(new ImportAction());
-		importButton.setName("import");
+		importButton.setName(UiUtil.IMPORT_BUTTON_LABEL);
 
 		JButton resetButton = new JButton(new ResetAction());
-		resetButton.setName("reset");
+		resetButton.setName(UiUtil.RESET_BUTTON_LABEL);
 
 		JPanel leftPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		leftPanel.add(importButton);
 		leftPanel.add(resetButton);
 
 		okButton = new JButton(new OKAction());
-		okButton.setName("OK");
+		okButton.setName(UiUtil.DIALOG_OK_LABEL);
 
 		JButton cancelButton = new JButton(new CancelAction());
-		cancelButton.setName("cancel");
+		cancelButton.setName(UiUtil.DIALOG_CANCEL_LABEL);
 
 		JPanel rightPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 		rightPanel.add(okButton);
@@ -308,7 +308,7 @@ public class ScriptEditor {
 
 	private class OKAction extends AbstractAction {
 		public OKAction() {
-			super("OK");
+			super(UiUtil.DIALOG_OK_LABEL);
 		}
 
 		@Override
@@ -320,7 +320,7 @@ public class ScriptEditor {
 
 	private class CancelAction extends AbstractAction {
 		public CancelAction() {
-			super("Cancel");
+			super(UiUtil.DIALOG_CANCEL_LABEL);
 		}
 
 		@Override
@@ -332,7 +332,7 @@ public class ScriptEditor {
 
 	private class ImportAction extends AbstractAction {
 		public ImportAction() {
-			super("Import");
+			super("导入");
 		}
 
 		@Override
@@ -372,7 +372,7 @@ public class ScriptEditor {
 
 	private class ResetAction extends AbstractAction {
 		public ResetAction() {
-			super("Reset");
+			super("重置");
 		}
 
 		@Override

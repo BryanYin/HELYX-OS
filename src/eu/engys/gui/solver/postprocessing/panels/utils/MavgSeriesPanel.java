@@ -43,7 +43,7 @@ import eu.engys.util.ui.ComponentsFactory;
 
 public class MavgSeriesPanel extends JPanel {
 
-    public static final String MOVING_AVERAGE = "Moving Average";
+    public static final String MOVING_AVERAGE = "移动平均";
 
     private JPanel seriesPanel;
     private MavgAccessory accessory;

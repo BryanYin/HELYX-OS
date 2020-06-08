@@ -84,14 +84,14 @@ public class FeatureLinesRefinementTable extends AbstractTableAdapter {
 		dialog.setName("line.adapter.dialog");
 
 		JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-		JButton okButton = new JButton(new AbstractAction("OK") {
+		JButton okButton = new JButton(new AbstractAction(UiUtil.DIALOG_OK_LABEL) {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				save();
 				dialog.setVisible(false);
 			}
 		});
-		okButton.setName("OK");
+		okButton.setName(UiUtil.DIALOG_OK_LABEL);
 		buttonsPanel.add(okButton);
 
 		JPanel mainPanel = new JPanel(new BorderLayout());

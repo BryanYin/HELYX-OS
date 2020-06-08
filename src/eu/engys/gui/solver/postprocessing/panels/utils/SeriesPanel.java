@@ -41,7 +41,7 @@ import eu.engys.util.ui.ComponentsFactory;
 
 public class SeriesPanel extends JPanel {
 
-    public static final String SERIES = "Series";
+    public static final String SERIES = "序列";
 
     private JPanel seriesPanel;
 

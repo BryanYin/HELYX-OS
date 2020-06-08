@@ -62,8 +62,8 @@ import eu.engys.util.ui.ResourcesUtil;
 public class HELYXOS extends AbstractApplication {
 
     private static final Logger logger = LoggerFactory.getLogger(HELYXOS.class);
-    private static final String DISCLAIMER = "This offering is not approved or endorsed by OpenCFD" + Symbols.COPYRIGHT + " Limited, the producer of the OPENFOAM" + Symbols.COPYRIGHT + " software and owner of the OPENFOAM" + Symbols.COPYRIGHT + "  and OpenCFD" + Symbols.COPYRIGHT + "  trade marks.";
-
+    // private static final String DISCLAIMER = "This offering is not approved or endorsed by OpenCFD" + Symbols.COPYRIGHT + " Limited, the producer of the OPENFOAM" + Symbols.COPYRIGHT + " software and owner of the OPENFOAM" + Symbols.COPYRIGHT + "  and OpenCFD" + Symbols.COPYRIGHT + "  trade marks.";
+    private static final String DISCLAIMER = "该软件并非从 OpenCFD" + Symbols.COPYRIGHT + " Limited 授权，其为 OPENFOAM" + Symbols.COPYRIGHT + " 软件和 OPENFOAM" + Symbols.COPYRIGHT + " 和 OpenCFD" + Symbols.COPYRIGHT + " 商标的所有者。";
     private JLabel versionLabel;
     private JButton versionButton;
 
@@ -83,7 +83,8 @@ public class HELYXOS extends AbstractApplication {
 
     @Override
     public String getTitle() {
-        return ApplicationInfo.getName() + " - powered by " + ApplicationInfo.getVendor() + Symbols.REGISTERED;
+        // return ApplicationInfo.getName() + " - powered by " + ApplicationInfo.getVendor() + Symbols.REGISTERED;
+        return "数洋智慧" + Symbols.REGISTERED + " CFD";
     }
 
     @Override
@@ -99,7 +100,7 @@ public class HELYXOS extends AbstractApplication {
     }
 
     private void addSupportItem(final View view) {
-        view.getMenuBar().getHelpMenu().add(new AbstractAction("Support", INFO_ICON) {
+        view.getMenuBar().getHelpMenu().add(new AbstractAction("支持信息", INFO_ICON) {
             @Override
             public void actionPerformed(ActionEvent e) {
                 showSupportWindow();
@@ -120,15 +121,16 @@ public class HELYXOS extends AbstractApplication {
                 ExecUtil.invokeLater(new Runnable() {
                     public void run() {
                         if (versionType.isUpdated()) {
-                            versionLabel.setText("Your version is up to date!");
+                            // versionLabel.setText("No updates available, already the latest version!");
+                            versionLabel.setText("已经是最新版本！");
                             versionLabel.setForeground(Color.GREEN.darker());
                             versionButton.setVisible(false);
                         } else if (versionType.isOld()) {
-                            versionLabel.setText("Version " + VersionChecker.getOnlineVersion() + " is available for download!");
+                            versionLabel.setText("有新版本 " + VersionChecker.getOnlineVersion() + " 可以下载！");
                             versionLabel.setForeground(Color.RED);
                             versionButton.setVisible(true);
                         } else if (versionType.isNotAvailable()) {
-                            versionLabel.setText("Version not available!");
+                            versionLabel.setText("版本不可用");
                             versionButton.setVisible(false);
                         }
                     }
@@ -145,7 +147,8 @@ public class HELYXOS extends AbstractApplication {
     @Override
     public JPanel createVersionPanel() {
         JPanel panel = new JPanel(new FlowLayout());
-        panel.add(versionLabel = new JLabel("Checking for updates..."));
+        // panel.add(versionLabel = new JLabel("Checking for updates..."));
+        panel.add(versionLabel = new JLabel("正在检查更新..."));
         versionLabel.setFont(new Font(versionLabel.getFont().getFontName(), Font.BOLD, versionLabel.getFont().getSize()));
 
         panel.add(versionButton = new JButton(new AbstractAction("Download") {
@@ -155,12 +158,12 @@ public class HELYXOS extends AbstractApplication {
                 try {
                     Util.openWebpage(new URL(downloadPage));
                 } catch (MalformedURLException e1) {
-                    logger.error("Cannot open " + downloadPage);
+                    logger.error("打不开" + downloadPage);
                 }
             }
         }));
         versionButton.setVisible(false);
-        panel.setBorder(BorderFactory.createTitledBorder("Version"));
+        panel.setBorder(BorderFactory.createTitledBorder("版本"));
         return panel;
     }
 

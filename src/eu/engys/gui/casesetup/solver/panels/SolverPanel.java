@@ -33,12 +33,12 @@ public interface SolverPanel {
 
     public static final String OUTER_CORRECTORS_LABEL = "Outer Correctors";
     public static final String CORRECTORS_LABEL = "Correctors";
-    public static final String NON_ORTHOGONAL_CORRECTORS_LABEL = "Non-orthogonal Correctors";
+    public static final String NON_ORTHOGONAL_CORRECTORS_LABEL = "非正交修正";
     public static final String RHO_MIN_LABEL = "Rho Min";
     public static final String RHO_MAX_LABEL = "Rho Max";
-    public static final String RESIDUAL_CONTROL_LABEL = "Residual Control";
-    public static final String RELAXATION_FACTORS_LABEL = "Relaxation Factors";
-    public static final String RELATIVE_TOLERANCE_LABEL = "Relative Tolerance";
+    public static final String RESIDUAL_CONTROL_LABEL = "残差控制";
+    public static final String RELAXATION_FACTORS_LABEL = "松弛因子";
+    public static final String RELATIVE_TOLERANCE_LABEL = "相对误差";
     public static final String TOLERANCE_LABEL = "Tolerance";
 
     Dictionary getSolverDictionary();

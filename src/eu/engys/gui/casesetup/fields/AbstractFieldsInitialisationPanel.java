@@ -99,17 +99,17 @@ public abstract class AbstractFieldsInitialisationPanel extends DefaultGUIPanel 
     
     protected static final Icon EDIT_ICON = ResourcesUtil.getIcon("edit.icon");
 
-    public static final String TYPE_LABEL = "Type";
+    public static final String TYPE_LABEL = "类型";
 
-    public static final String FIELDS_INITIALISATION = "Fields Initialisation";
+    public static final String FIELDS_INITIALISATION = "场参数初始化";
     public static final String FIELDS_INITIALISE_BUTTON = "fields.initialise.button";
 
-    public static final String DEFAULT_LABEL = "Default";
-    public static final String FIXED_VALUE_LABEL = "Fixed Value";
-    public static final String POTENTIAL_FLOW_LABEL = "Potential Flow";
-    public static final String CELL_SET_LABEL = "CellSet";
-    public static final String INITIALISE_BOUNDARIES_LABEL = "Initialise Boundaries";
-    public static final String EDIT_LABEL = "Edit";
+    public static final String DEFAULT_LABEL = "默认";
+    public static final String FIXED_VALUE_LABEL = "固定值";
+    public static final String POTENTIAL_FLOW_LABEL = "潜流";
+    public static final String CELL_SET_LABEL = "单元集";
+    public static final String INITIALISE_BOUNDARIES_LABEL = "初始边界条件";
+    public static final String EDIT_LABEL = "编辑";
 
     private Map<String, String> unityMeasures = new HashMap<>();
     protected Map<Field, BeanPanelBuilder> fieldBuilderMap = new HashMap<>();

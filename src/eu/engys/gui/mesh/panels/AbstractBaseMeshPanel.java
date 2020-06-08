@@ -66,8 +66,8 @@ public abstract class AbstractBaseMeshPanel extends AbstractGUIPanel {
 
     private static final Logger logger = LoggerFactory.getLogger(AbstractBaseMeshPanel.class);
 
-    public static final String BASE_MESH = "Base Mesh";
-    public static final String BASE_MESH_TYPE_LABEL = "Base Mesh Type";
+    public static final String BASE_MESH = "基础网格";
+    public static final String BASE_MESH_TYPE_LABEL = "基础网格类型";
 
     private BaseMeshTreeNodeManager treeNodeManager;
 

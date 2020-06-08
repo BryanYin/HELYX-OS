@@ -27,7 +27,7 @@ package eu.engys.core.project.state;
 import static eu.engys.util.ui.UiUtil.NONE_LABEL;
 
 public enum Mach {
-    LOW("loMach", "Low"), HIGH("hiMach", "High"), NONE("none", NONE_LABEL);
+    LOW("loMach", "低"), HIGH("hiMach", "高"), NONE("none", NONE_LABEL);
 
     private String key;
     private String label;

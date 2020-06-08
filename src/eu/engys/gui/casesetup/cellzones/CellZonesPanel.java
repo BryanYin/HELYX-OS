@@ -52,9 +52,9 @@ import eu.engys.util.ui.textfields.StringField;
 
 public class CellZonesPanel extends AbstractGUIPanel {
 
-    public static final String CELL_ZONES = "Cell Zones";
-    public static final String CELL_ZONE_NAME_LABEL = "Cell Zone Name";
-    public static final String CELL_ZONE_TYPE_LABEL = "Cell Zone Type";
+    public static final String CELL_ZONES = "网格单元区域";
+    public static final String CELL_ZONE_NAME_LABEL = "单元区域名称";
+    public static final String CELL_ZONE_TYPE_LABEL = "单元区域类型";
 
     private CellZonesTreeNodeManager treeNodeManager;
     private List<CellZoneType> types;

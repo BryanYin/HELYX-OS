@@ -56,7 +56,7 @@ public class BlockReader {
      * Here the user has selected a block mesh of type: user defined. I need to load the data from blockMeshDict to visualise the block.
      */
     public MultiPlane loadBlock(BlockMeshDict blockMeshDict, SnappyHexMeshDict snappyHexMeshDict) {
-        MultiPlane block = new MultiPlane("BoundingBox");
+        MultiPlane block = new MultiPlane("边界面");
         loadBlocksFromBlockMeshDict(blockMeshDict, block);
         loadVerticesFromBlockMeshDict(blockMeshDict, block);
         

@@ -209,7 +209,7 @@ public abstract class AbstractApplication implements Application {
 	protected abstract PreferencesBean getPreferencesBean();
 
 	protected void addHelpItem(final View view) {
-		view.getMenuBar().getHelpMenu().add(new AbstractAction("About", INFO_ICON) {
+		view.getMenuBar().getHelpMenu().add(new AbstractAction("关于", INFO_ICON) {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new AboutWindow(getMediumIcon(), getBannerIcon());
@@ -231,18 +231,18 @@ public abstract class AbstractApplication implements Application {
 	 * RESOURCES
 	 */
 
-	public static final String PREFERENCES_LABEL = "Preferences";
+	public static final String PREFERENCES_LABEL = "系统设置";
 	public static final Icon PREFERENCES_ICON = ResourcesUtil.getIcon("preferences.icon");
 
-	public static final String LICENSE_MANAGER_LABEL = "License Manager";
+	public static final String LICENSE_MANAGER_LABEL = "许可管理";
 	public static final Icon LICENSE_MANAGER_ICON = ResourcesUtil.getIcon("license.icon");
 
-	public static final String RELEASE_NOTES_LABEL = "Release Notes";
-	public static final String RELEASE_NOTES_WARNING_MESSAGE = "Release notes not found or not installed";
+	public static final String RELEASE_NOTES_LABEL = "发行备注";
+	public static final String RELEASE_NOTES_WARNING_MESSAGE = "无发行备注";
 
-	public static final String DOCUMENTATION_LABEL = "Documentation";
+	public static final String DOCUMENTATION_LABEL = "文档";
 	public static final Icon DOCUMENTATION_ICON = ResourcesUtil.getIcon("file.pdf");
-	public static final String DOCUMENTATION_WARNING_MESSAGE = "Documentation not found or not installed";
+	public static final String DOCUMENTATION_WARNING_MESSAGE = "文档未安装";
 
 	public static final Icon INFO_ICON = ResourcesUtil.getIcon("info.icon");
 	public static final Icon FOLDER_ICON = ResourcesUtil.getIcon("application.open.icon");

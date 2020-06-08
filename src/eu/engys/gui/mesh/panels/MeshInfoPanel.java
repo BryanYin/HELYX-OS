@@ -104,24 +104,24 @@ public class MeshInfoPanel {
         zBounds = labelField("");
 
         statistics = new PanelBuilder();
-        statistics.addComponent("Points", points);
-        statistics.addComponent("Cells", cells);
-        statistics.addComponent("Faces", faces);
-        statistics.addComponent("Internal Faces", internalFaces);
+        statistics.addComponent("点数", points);
+        statistics.addComponent("网格数", cells);
+        statistics.addComponent("面数", faces);
+        statistics.addComponent("内部面", internalFaces);
 
-        statistics.addComponent("Boundary Patches", patches);
-        statistics.addComponent("Point Zones", pointZones);
-        statistics.addComponent("Face Zones", faceZones);
-        statistics.addComponent("Cell Zones", cellZones);
+        statistics.addComponent("边界", patches);
+        statistics.addComponent("点区域", pointZones);
+        statistics.addComponent("面区域", faceZones);
+        statistics.addComponent("网格区域", cellZones);
 
         cellTypes = new PanelBuilder();
-        cellTypes.addComponent("Hexahedra", hexahedra);
-        cellTypes.addComponent("Prisms", prisms);
-        cellTypes.addComponent("Wedges", wedges);
-        cellTypes.addComponent("Pyramids", pyramids);
-        cellTypes.addComponent("Tet Wedges", tetWedges);
-        cellTypes.addComponent("Tetrahedra", tetrahedra);
-        cellTypes.addComponent("Polyhedra", polyhedra);
+        cellTypes.addComponent("六面体", hexahedra);
+        cellTypes.addComponent("三棱柱", prisms);
+        cellTypes.addComponent("楔形体", wedges);
+        cellTypes.addComponent("多棱锥", pyramids);
+        cellTypes.addComponent("四棱柱", tetWedges);
+        cellTypes.addComponent("四面体", tetrahedra);
+        cellTypes.addComponent("多面体", polyhedra);
         cellTypes.addComponent("", new JLabel(" "));
 
         // statistics.addComponent("Cells per Refinement Level", cellsPerLevel);
@@ -130,9 +130,9 @@ public class MeshInfoPanel {
         dataArrays = new PanelBuilder();
 
         bounds = new PanelBuilder();
-        bounds.addComponent("X Range", xBounds);
-        bounds.addComponent("Y Range", yBounds);
-        bounds.addComponent("Z Range", zBounds);
+        bounds.addComponent("X 范围", xBounds);
+        bounds.addComponent("Y 范围", yBounds);
+        bounds.addComponent("Z 范围", zBounds);
     }
 
     public void load(Mesh mesh) {
@@ -170,19 +170,19 @@ public class MeshInfoPanel {
     }
 
     public JPanel getStatistics() {
-        return statistics.withTitle("Statistics").getPanel();
+        return statistics.withTitle("统计信息").getPanel();
     }
 
     public JPanel getCellType() {
-        return cellTypes.withTitle("Cell Types").getPanel();
+        return cellTypes.withTitle("单元格类型").getPanel();
     }
 
     public JPanel getDataArrays() {
-        return dataArrays.withTitle("Data Arrays").getPanel();
+        return dataArrays.withTitle("数据组").getPanel();
     }
 
     public JPanel getBounds() {
-        return bounds.withTitle("Bounds").getPanel();
+        return bounds.withTitle("边界").getPanel();
     }
 
     public void reset() {
@@ -219,7 +219,7 @@ public class MeshInfoPanel {
 
     private String getTextForBounds(double min, double max) {
         if (areValid(min, max)) {
-            return "[" + formatter.format(min) + " , " + formatter.format(max) + "] (Delta " + formatter.format(max - min) + ")";
+            return "[" + formatter.format(min) + " , " + formatter.format(max) + "] (差值 " + formatter.format(max - min) + ")";
         } else {
             return "[0 , 0]";
         }

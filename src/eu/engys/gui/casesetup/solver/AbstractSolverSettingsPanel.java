@@ -74,10 +74,10 @@ import eu.engys.util.ui.builder.PanelBuilder;
 public abstract class AbstractSolverSettingsPanel extends DefaultGUIPanel {
 
     private static final String EMPTY = "EMPTY";
-    private static final String STATE_CHANGED_WARNING = "Solution state has been changed.\nAll fields default settings are going to be reset now.\nContinue?";
+    private static final String STATE_CHANGED_WARNING = "求解状态改变。\n所有字段将被还原成默认值\n继续?";
 
-    public static final String SOLVER_SETTINGS = "Solver Settings";
-    public static final String SOLUTION_ALGORITHM_LABEL = "Solution Algorithm";
+    public static final String SOLVER_SETTINGS = "求解器设置";
+    public static final String SOLUTION_ALGORITHM_LABEL = "求解算法";
 
     protected JComboBox<SolverFamily> algorithmCombo;
     private ActionListener algorithmActionListener;
@@ -243,7 +243,7 @@ public abstract class AbstractSolverSettingsPanel extends DefaultGUIPanel {
     @Override
     public boolean canStop() {
         if (stateHasChanged()) {
-            if (JOptionPane.showConfirmDialog(UiUtil.getActiveWindow(), STATE_CHANGED_WARNING, "State Changed", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE) == JOptionPane.OK_OPTION) {
+            if (JOptionPane.showConfirmDialog(UiUtil.getActiveWindow(), STATE_CHANGED_WARNING, "状态更改", JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE) == JOptionPane.OK_OPTION) {
                 return true;
             } else {
                 return false;

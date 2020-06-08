@@ -33,7 +33,7 @@ import eu.engys.core.project.materials.incompressible.IncompressibleMaterial;
 
 public class StandardIncompressibleMaterialsPanel extends AbstractIncompressibleMaterialsPanel {
 
-    public static final String LAMINAR_PRANDTL_NUMBER_LABEL = "Laminar Prandtl Number";
+    public static final String LAMINAR_PRANDTL_NUMBER_LABEL = "层流普朗特常数";
 
     @Inject
     public StandardIncompressibleMaterialsPanel() {

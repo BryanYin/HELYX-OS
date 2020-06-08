@@ -74,17 +74,17 @@ public class CustomFileDialog {
 
     public static final String CUSTOM_DIALOG_NAME = "custom.dialog";
 
-    public static final String TITLE = "New Custom File";
+    public static final String TITLE = "新建自定义文件";
 
-    public static final String VALUE_LABEL = "Value";
-    public static final String NAME_LABEL = "Name";
-    public static final String TYPE_LABEL = "Type";
-    public static final String PARENT_LABEL = "Parent";
+    public static final String VALUE_LABEL = "值";
+    public static final String NAME_LABEL = "名称";
+    public static final String TYPE_LABEL = "类型";
+    public static final String PARENT_LABEL = "父目录";
     public static final String DEFAULT_NAME = "newFile";
-    public static final String NEW_NAME = "New ...";
+    public static final String NEW_NAME = "新建 ...";
 
-    public static final String CANCEL_LABEL = "Cancel";
-    public static final String CREATE_NEW_LABEL = "Create New";
+    public static final String CANCEL_LABEL = "取消";
+    public static final String CREATE_NEW_LABEL = "创建新文件";
 
     private static final String[] VETOED_DICT_LIST = new String[] { RunDict.RUN_DICT, CaseSetupDict.CASE_SETUP_DICT, CustomNodeDict.CUSTOM_NODE_DICT };
 

@@ -33,7 +33,7 @@ import eu.engys.util.ui.ChooserPanel;
 
 public class MachPanel extends ChooserPanel {
 
-    public static final String MACH = "Mach";
+    public static final String MACH = "马赫";
 
     public MachPanel() {
         super(MACH);

@@ -35,14 +35,14 @@ public class ElementSelector {
 
     private static final Logger logger = LoggerFactory.getLogger(ElementSelector.class);
 
-    public static final String MESH = "Mesh";
+    public static final String MESH = "网格";
     private static final String MESH_ELEMENT = "eu.engys.gui.mesh.MeshElement";
 
     private static final String CASE_SETUP_ELEMENT = "eu.engys.gui.casesetup.CaseSetupElement";
-    public static final String FIELDS_INITIALISATION = "Fields Initialisation";
+    public static final String FIELDS_INITIALISATION = "场初始化";
 
     private static final String SOLVER_ELEMENT = "eu.engys.gui.solver.SolverElement";
-    public static final String RESIDUALS = "Residuals";
+    public static final String RESIDUALS = "残差";
 
     private Model model;
     private View view;

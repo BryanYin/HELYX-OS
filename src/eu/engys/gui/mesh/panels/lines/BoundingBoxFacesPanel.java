@@ -44,12 +44,12 @@ import eu.engys.util.ui.textfields.StringField;
 
 public class BoundingBoxFacesPanel {
 
-    public static final String NUMBER_OF_LAYERS_LABEL = "Number of Layers";
-    public static final String LAYER_STRETCHING_LABEL = "Layer Stretching";
-    public static final String FINAL_LAYER_THICKNESS_LABEL = "Final Layer Thickness";
-    private static final String LAYER_MIN_THICKNESS_LABEL = "Layer Min Thickness";
-    public static final String FACE_NAME_LABEL = "Face Name";
-    public static final String BOUNDING_BOX_FACES_LABEL = "Bounding Box Faces";
+    public static final String NUMBER_OF_LAYERS_LABEL = "层数";
+    public static final String LAYER_STRETCHING_LABEL = "分层拉伸";
+    public static final String FINAL_LAYER_THICKNESS_LABEL = "最终层厚度";
+    private static final String LAYER_MIN_THICKNESS_LABEL = "层最小厚度";
+    public static final String FACE_NAME_LABEL = "面名称";
+    public static final String BOUNDING_BOX_FACES_LABEL = "边界面";
 
     private PanelBuilder planeBuilder;
     private DictionaryModel planeModel;

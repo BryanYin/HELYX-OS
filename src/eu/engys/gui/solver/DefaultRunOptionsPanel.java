@@ -50,10 +50,10 @@ import net.java.dev.designgridlayout.Componentizer;
 
 public class DefaultRunOptionsPanel extends DefaultGUIPanel {
 
-    private static final String RUN = "Run Options";
-    public static final String SOLVER_LABEL = "Solver";
-    public static final String LOG_FILE_LABEL = "Log File";
-    public static final String PROPERTIES_LABEL = "Properties";
+    private static final String RUN = "运行选项";
+    public static final String SOLVER_LABEL = "求解器";
+    public static final String LOG_FILE_LABEL = "日志文件";
+    public static final String PROPERTIES_LABEL = "属性";
 
     private JLabel solverName;
     // private IntegerField nProcessors;
@@ -103,7 +103,7 @@ public class DefaultRunOptionsPanel extends DefaultGUIPanel {
         // nProcessors.setEnabled(false);
 
         PanelBuilder actions = new PanelBuilder();
-        actions.getPanel().setBorder(BorderFactory.createTitledBorder("Actions"));
+        actions.getPanel().setBorder(BorderFactory.createTitledBorder("操作"));
 
         if (ActionManager.getInstance().contains(SOLVER_RUN) && ActionManager.getInstance().contains(SOLVER_RUN_EDIT)) {
             JButton runSolverButton = new JButton(ActionManager.getInstance().get(SOLVER_RUN));

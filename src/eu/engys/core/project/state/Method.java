@@ -26,7 +26,7 @@ package eu.engys.core.project.state;
 
 public enum Method {
 
-    LES("les", "LES/DES"), RANS("ras", "RANS"), NONE("None", "NONE");
+    LES("les", "LES/DES"), RANS("ras", "RANS"), NONE("None", "无");
 
     private String key;
     private String label;

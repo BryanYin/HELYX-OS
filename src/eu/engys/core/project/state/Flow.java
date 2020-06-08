@@ -28,7 +28,7 @@ import static eu.engys.util.ui.UiUtil.NONE_LABEL;
 
 public enum Flow {
 
-    COMPRESSIBLE("compressible", "Compressible"), INCOMPRESSIBLE("incompressible", "Incompressible"), NONE("none", NONE_LABEL);
+    COMPRESSIBLE("compressible", "可压缩"), INCOMPRESSIBLE("incompressible", "非可压缩"), NONE("none", NONE_LABEL);
 
     private String key;
     private String label;

@@ -42,7 +42,7 @@ import eu.engys.util.ui.UiUtil;
 
 public class ResidualsPanel extends DefaultGUIPanel implements SelectedViewProvider {
 
-    public static final String RESIDUALS = "Residuals";
+    public static final String RESIDUALS = "残差";
 
     private ResidualsView residualsView;
     private JToggleButton showCrosshairButton;

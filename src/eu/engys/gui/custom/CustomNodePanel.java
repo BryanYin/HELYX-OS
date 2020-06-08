@@ -56,14 +56,14 @@ import net.java.dev.designgridlayout.Componentizer;
 
 public class CustomNodePanel extends AbstractGUIPanel {
 
-    public static final String ADD_LABEL = "Add";
-    public static final String REMOVE_LABEL = "Remove";
+    public static final String ADD_LABEL = "添加";
+    public static final String REMOVE_LABEL = "移除";
 
-    public static final String CUSTOM = "Custom";
-    public static final String FILE_NAME_LABEL = "File Name";
-    public static final String FILE_TYPE_LABEL = "File Type";
-    public static final String FILE_PARENT_LABEL = "File Parent";
-    public static final String EDIT_LABEL = "Edit";
+    public static final String CUSTOM = "自定义";
+    public static final String FILE_NAME_LABEL = "文件名";
+    public static final String FILE_TYPE_LABEL = "文件类型";
+    public static final String FILE_PARENT_LABEL = "文件目录";
+    public static final String EDIT_LABEL = "编辑";
 
     private CustomTreeNodeManager treeNodeManager;
     private JButton newButton;
